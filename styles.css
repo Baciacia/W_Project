@@ -1,0 +1,60 @@
+/* am eliminat setarile impuse de css*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background: #131313;
+    text-align: center;
+}
+
+.title{
+    color: aliceblue;
+    font-size: 2.5rem;
+    float: left;
+    margin-left: 4.5rem;
+    margin-top: 1rem;
+}
+
+.navbar_li{
+    display:inline;
+}
+
+.navbar_li_link{
+  display:inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 100px;
+  padding: 20px;
+}
+
+.navbar_li_link:hover{
+    background-color: #767676; 
+}
+
+.navbar_li_button:hover{
+    background-color: #767676; 
+}
+
+.navbar_button{
+    display:inline-block;
+    color: whitesmoke;
+    background-color: gray;
+    float: right;
+    margin-top: 1.1rem;
+    margin-right: 2rem;
+    padding: 10px;
+    font-size: 60%;
+}
+
+
+.navbar_ul{
+    font-size: 150%;
+    list-style-type: none; /* sa nu aibe deloc semne de lista adica cerculete, numere arabe, numere romane*/
+    background-color: #333;
+    padding: 8px;
+}
+
