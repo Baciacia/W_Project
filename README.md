@@ -4,6 +4,6 @@ Sa se implementeze o aplicatie Web menita a gestiona informatiile vizand o gradi
 
 Echipa formata din urmatorii membri:
 
-Baciu Eduard Alexandru
-Puscasu Florin
-Vasiliu Codrin
+Baciu Eduard Alexandru      
+Puscasu Florin      
+Vasiliu Codrin     
