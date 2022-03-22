@@ -14,8 +14,18 @@
     color: aliceblue;
     font-size: 2.5rem;
     float: left;
-    margin-left: 4.5rem;
-    margin-top: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 1.0rem;
+}
+
+.logo{
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin-right: 0.2rem;
+    margin-left: 2rem;
+    border: 2px solid grey; /* Green */
+    
 }
 
 .navbar_li{
@@ -48,6 +58,8 @@
     margin-right: 2rem;
     padding: 10px;
     font-size: 60%;
+    border-radius: 8px;
+    border: 2px solid white;
 }
 
 
