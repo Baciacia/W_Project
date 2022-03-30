@@ -42,6 +42,74 @@
         </div>
     </nav>
     <script src="api.js"></script>
+
+    <div class="subnav">
+        <p>WELCOME TO OUR ZOO!</p>
+        <form action="#"></form>
+        <br>
+        <input type="text" placeholder="Search..">
+        <input type="submit">
+      </div>
+
+    <div class="container">
+
+        <div class="slide">
+            <div class="slide_title"></div>
+            <img src="Imagini\mamifere.jpg" style="width: 100%;">
+        </div>
+
+        <div class="slide">
+            <div class="slide_title"></div>
+            <img src="Imagini\pesti.webp" style="width: 100%;">
+        </div>
+
+        <div class="slide">
+            <div class="slide_title"></div>
+            <img src="Imagini\reptila.jpg" style="width: 100%;">
+        </div>
+
+        <div class="slide">
+            <div class="slide_title"></div>
+            <img src="Imagini\pasari.jpg" style="width: 100%;">
+        </div>
+
+        <div class="slide">
+            <div class="slide_title"></div>
+            <img src="Imagini\insecte.jpg" style="width: 100%;">
+        </div>
+
+         <!--butoanele de schimbat pozele-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+        <!-- aici facem o ?lista? -(ca o matrice cu o linie si 5 coloane, unde a[0][x] este o poza) de poze pe care le vom parcurge cu ajutorul butoanelor-->
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="Imagini\mamifere.jpg" style="width:100%;" onclick="currentSlide(1)" alt="Mamifere">
+        </div>
+
+        <div class="column">
+            <img class="demo cursor" src="Imagini\pesti.webp " style="width:100%;" onclick="currentSlide(2)" alt="Pesti">
+        </div>
+
+        <div class="column">
+            <img class="demo cursor" src="Imagini\reptila.jpg" style="width:100%" onclick="currentSlide(3)" alt="Reptile">
+        </div>
+
+        <div class="column">
+            <img class="demo cursor" src="Imagini\pasari.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pasari">
+        </div>
+
+        <div class="column">
+            <img class="demo cursor" src="Imagini\insecte.jpg" style="width:100%" onclick="currentSlide(5)" alt="Insecte">
+        </div>
+
+    </div>
+</div>
 </body>
 
 </html>

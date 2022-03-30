@@ -10,7 +10,7 @@
     /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
     align-items: center;
     min-height: 6rem;
-    background-color: #5d4954;
+    background-color:  rgb(201, 120, 15);
     font-family: 'Palette Mosaic', cursive;
 }
 
@@ -52,12 +52,109 @@
     margin: 5px;
 }
 
+/*-----------------------Imaginile principale------------------------*/
+
+/* am setat ca toate imaginile sa aibe aceeasi dimensiune*/
+
+img {
+    vertical-align: middle;
+    width: 300px;
+    height: 450px;
+}
+  
+
+.container{
+    position: relative;
+}
+
+.slide{
+    display: none;
+}
+
+
+/* Next si prev -- butoanele */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 26px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* cand dai cu mouseul peste adaugam o culoare de background sa se vada frumos*/
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row:after {
+    content: "";
+    display: none;
+    clear: both;
+  }
+
+/* Pentru descrierea pozelor gen maifere, pesti etc.*/
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 28px 16px;
+    color: white;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 140%;
+  }
+
+/* Pnetru salut si search bar*/
+  .subnav{
+    text-align: center;
+    background-color: #222;
+    padding: 28px 16px;
+    color: white;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 140%;
+  }
+
+  .subnav input[type=text]{
+      width: 200px;
+      height: 30px;
+      font-size: 90%;
+  }
+  
+  /* 5 coloane una langa alta */
+  .column {
+    float: left;
+    width: 50%;
+    display: none;
+  }
+
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+/*------------------Sfarsit imagini-----------------------------*/
 
 /* pentru a mari spatiul dintre iteme cand micsorez fereastra*/
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1200px) {
     .nav_list {
-        width: 50%;
+        width: 63%;
     }
 }
 
