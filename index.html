@@ -44,18 +44,26 @@
     <script src="api.js"></script>
 
     <div class="subnav">
-        <p>WELCOME TO OUR ZOO!</p>
-        <form action="#"></form>
-        <br>
-        <input type="text" placeholder="Search..">
-        <input type="submit">
-      </div>
+        <div class="hello-subnav">
+            <p>WELCOME TO OUR ZOO!</p>
+        </div>
+        <div class="sn-under-hello">
+            <div class = "msg-for-bar">
+                <h4>If you want to find an animal go and search it right here:</h4>
+            </div>
+            <br>
+            <div class="searchbar">
+                <input type="text" placeholder="Search..">
+                <input type="submit">
+            </div>
+        </div>
+    </div>
 
     <div class="container">
-
-        <div class="slide">
-            <div class="slide_title"></div>
-            <img src="Imagini\mamifere.jpg" style="width: 100%;">
+        <div class="slide" id="first-img">
+            <div class="slide_title">
+                <img src="Imagini\mamifere.jpg" style="width: 100%;">
+            </div>
         </div>
 
         <div class="slide">
@@ -84,32 +92,44 @@
 
         <div class="caption-container">
             <p id="caption"></p>
-          </div>
+        </div>
 
         <!-- aici facem o ?lista? -(ca o matrice cu o linie si 5 coloane, unde a[0][x] este o poza) de poze pe care le vom parcurge cu ajutorul butoanelor-->
-    <div class="row">
-        <div class="column">
-            <img class="demo cursor" src="Imagini\mamifere.jpg" style="width:100%;" onclick="currentSlide(1)" alt="Mamifere">
-        </div>
 
-        <div class="column">
-            <img class="demo cursor" src="Imagini\pesti.webp " style="width:100%;" onclick="currentSlide(2)" alt="Pesti">
-        </div>
+        <br>
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="Imagini\mamifere.jpg" style="width:100%;" onclick="currentSlide(1)" alt="Mamifere">
+            </div>
 
-        <div class="column">
-            <img class="demo cursor" src="Imagini\reptila.jpg" style="width:100%" onclick="currentSlide(3)" alt="Reptile">
-        </div>
+            <div class="column">
+                <img class="demo cursor" src="Imagini\pesti.webp " style="width:100%;" onclick="currentSlide(2)" alt="Pesti">
+            </div>
 
-        <div class="column">
-            <img class="demo cursor" src="Imagini\pasari.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pasari">
-        </div>
+            <div class="column">
+                <img class="demo cursor" src="Imagini\reptila.jpg" style="width:100%" onclick="currentSlide(3)" alt="Reptile">
+            </div>
 
-        <div class="column">
-            <img class="demo cursor" src="Imagini\insecte.jpg" style="width:100%" onclick="currentSlide(5)" alt="Insecte">
+            <div class="column">
+                <img class="demo cursor" src="Imagini\pasari.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pasari">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="Imagini\insecte.jpg" style="width:100%" onclick="currentSlide(5)" alt="Insecte">
+            </div>
+        </div>
+    </div>
+    
+    <div class="bar-2">
+        <div class="infos">
+            <img src="Imagini/ceas.jpg"> 
+            <br>
+            <div class="open-info">
+                <h4>Open today <br> 9am - 5pm</h4>
+            </div>
         </div>
 
     </div>
-</div>
 </body>
 
 </html>

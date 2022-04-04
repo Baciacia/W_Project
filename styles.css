@@ -10,7 +10,7 @@
     /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
     align-items: center;
     min-height: 6rem;
-    background-color:  rgb(201, 120, 15);
+    background-color:  #76B947;
     font-family: 'Palette Mosaic', cursive;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .nav_list a {
-    color: white;
+    color: #B94776;
     text-decoration: none;
     letter-spacing: 3px;
 }
@@ -46,7 +46,7 @@
 /* aici fac meniul ala cu 3 linii ce arata ca un burger*/
 
 .meniu div {
-    background-color: rgb(218, 212, 212);
+    background-color: #B94776;
     width: 25px;
     height: 3px;
     margin: 5px;
@@ -109,8 +109,8 @@ img {
 /* Pentru descrierea pozelor gen maifere, pesti etc.*/
   .caption-container {
     text-align: center;
-    background-color: #222;
-    padding: 28px 16px;
+    background-color: #8A47B9;
+    padding: 28px;
     color: white;
     font-family: 'Palette Mosaic', cursive;
     font-size: 140%;
@@ -119,8 +119,8 @@ img {
 /* Pnetru salut si search bar*/
   .subnav{
     text-align: center;
-    background-color: #222;
-    padding: 28px 16px;
+    background-color: #8A47B9;
+    padding: 15px 10px;
     color: white;
     font-family: 'Palette Mosaic', cursive;
     font-size: 140%;
@@ -131,12 +131,44 @@ img {
       height: 30px;
       font-size: 90%;
   }
+
+  .subnav input[type=submit]{
+    width: 70px;
+    height: 30px;
+    font-size: 80%;
+}
+
+.hello-subnav{
+    margin-bottom: 5vh;
+}
+
+.sn-under-hello{
+    display: flex;
+}
+
+.msg-for-bar{
+    display: flex;
+    margin-left: 5vh;
+    color: #222;
+}
+
+.searchbar{
+    display : flex;
+    margin-left: 4vh;
+    font-size: 90%;
+    width: 30vh;
+   
+}
   
   /* 5 coloane una langa alta */
   .column {
     float: left;
     width: 50%;
     display: none;
+  }
+
+  #first-img{
+      display: block;
   }
 
   .demo {
@@ -149,6 +181,27 @@ img {
   }
 
 /*------------------Sfarsit imagini-----------------------------*/
+
+/* ------------------Bara cu informatii-------------------------*/
+
+.bar-2{
+    display: flex;
+    height: 16vh;
+    width: auto;
+    background-color: #76B947;
+}
+
+.open-info{
+
+}
+
+.bar-2 img{
+    width: 14vh;
+    height: 10vh;
+    margin-top: 2vh;
+}
+
+
 
 /* pentru a mari spatiul dintre iteme cand micsorez fereastra*/
 
