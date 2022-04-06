@@ -9,8 +9,8 @@
     justify-content: space-around;
     /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
     align-items: center;
-    min-height: 6rem;
-    background-color:  #76B947;
+    min-height: 5.4rem;
+    background-color:  #333;
     font-family: 'Palette Mosaic', cursive;
 }
 
@@ -18,6 +18,12 @@
     color: rgb(218, 212, 212);
     letter-spacing: 7px;
     font-size: 100%;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 180%;
+    color: #ffffff;
 }
 
 .nav_list {
@@ -31,7 +37,7 @@
 }
 
 .nav_list a {
-    color: #B94776;
+    color: #ffffff;
     text-decoration: none;
     letter-spacing: 3px;
 }
@@ -46,7 +52,7 @@
 /* aici fac meniul ala cu 3 linii ce arata ca un burger*/
 
 .meniu div {
-    background-color: #B94776;
+    background-color: #ffffff;
     width: 25px;
     height: 3px;
     margin: 5px;
@@ -58,8 +64,9 @@
 
 img {
     vertical-align: middle;
-    width: 300px;
-    height: 450px;
+    width: 30px;
+    height: 570px;
+   
 }
   
 
@@ -69,6 +76,27 @@ img {
 
 .slide{
     display: none;
+}
+
+
+.slide-divs{
+    display: flex;
+}
+
+.slide-div{
+    display: flex;
+}
+
+.slide_color1{
+    background-color: #2468a5;
+}
+
+.slide_color2{
+    background-color: #65a051;
+}
+
+.slide_color3{
+    background-color:#e57b2c ; 
 }
 
 
@@ -97,7 +125,7 @@ img {
   /* cand dai cu mouseul peste adaugam o culoare de background sa se vada frumos*/
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(46, 44, 44, 0.8);
 }
 
 .row:after {
@@ -106,60 +134,7 @@ img {
     clear: both;
   }
 
-/* Pentru descrierea pozelor gen maifere, pesti etc.*/
-  .caption-container {
-    text-align: center;
-    background-color: #8A47B9;
-    padding: 28px;
-    color: white;
-    font-family: 'Palette Mosaic', cursive;
-    font-size: 140%;
-  }
 
-/* Pnetru salut si search bar*/
-  .subnav{
-    text-align: center;
-    background-color: #8A47B9;
-    padding: 15px 10px;
-    color: white;
-    font-family: 'Palette Mosaic', cursive;
-    font-size: 140%;
-  }
-
-  .subnav input[type=text]{
-      width: 200px;
-      height: 30px;
-      font-size: 90%;
-  }
-
-  .subnav input[type=submit]{
-    width: 70px;
-    height: 30px;
-    font-size: 80%;
-}
-
-.hello-subnav{
-    margin-bottom: 5vh;
-}
-
-.sn-under-hello{
-    display: flex;
-}
-
-.msg-for-bar{
-    display: flex;
-    margin-left: 5vh;
-    color: #222;
-}
-
-.searchbar{
-    display : flex;
-    margin-left: 4vh;
-    font-size: 90%;
-    width: 30vh;
-   
-}
-  
   /* 5 coloane una langa alta */
   .column {
     float: left;
@@ -186,22 +161,93 @@ img {
 
 .bar-2{
     display: flex;
-    height: 16vh;
+    height: 6rem;
     width: auto;
-    background-color: #76B947;
+    background-color: rgb(226, 189, 41);
+    margin-top: 0;
 }
 
-.open-info{
-
+.infos{
+    display: flex;
+    font-size: 180%;
+    margin-left: 30rem;
+    font-family: 'Palette Mosaic', cursive;
+    color: rgb(12, 69, 12);
+    margin-top: 1rem;
 }
 
-.bar-2 img{
-    width: 14vh;
-    height: 10vh;
-    margin-top: 2vh;
+/*-------------------------------pentru chestiile din visit us--------------------------------------*/
+
+.msg-visit{
+    text-align: center;
+    color: #333;
+    font-size: 170%;
+    display: flex;
+    margin-left: 25rem;
+}
+
+.body-v{
+    background-color: #e57b2c;
 }
 
 
+.formular{
+    display: table;
+   
+}
+
+div{
+    display: table-row;
+}
+
+.bar{
+    display: table-cell;
+    margin-left: 35rem;
+    width: 6rem;
+    height: 2rem;
+    margin-top: 2rem;
+    margin-left: 30rem;
+    
+}
+
+.fname label{
+    font-size: 140%;
+    margin-right: 3rem;
+}
+
+
+
+.lname label{
+    font-size: 140%;
+    margin-right: 3rem;
+}
+
+
+.activity label{
+    font-size: 140%;
+    margin-right: 3rem;
+}
+
+.date label{
+    font-size: 140%;
+    margin-right: 3rem;
+}
+
+.number label{
+    font-size: 140%;
+    margin-right: 3rem;
+}
+
+.hour label{
+    font-size: 140%;
+    margin-right: 3rem;
+}
+
+
+.help label{
+    font-size: 140%;
+    margin-right: 3rem;
+}
 
 /* pentru a mari spatiul dintre iteme cand micsorez fereastra*/
 
