@@ -169,11 +169,54 @@ img {
 
 .infos{
     display: flex;
-    font-size: 180%;
+    font-size: 130%;
     margin-left: 30rem;
     font-family: 'Palette Mosaic', cursive;
     color: rgb(12, 69, 12);
     margin-top: 1rem;
+}
+
+.sign-up{
+    margin-top: 4rem;
+    font-size: 110%;
+    
+}
+
+.footer{
+    height: 15rem;
+    background-color: #333;
+}
+
+.signmsg h2{
+    color: #e57b2c;
+    font-size: 330%;
+    margin-left: 15rem;
+}
+
+.signmsg h4{
+    color: #ffffff;
+    font-size: 130%;
+    margin-left: 15rem;
+    margin-top: 2rem;
+}
+
+.signup{
+    height: 2.5rem;
+    width: 6rem;
+    border-color: #333;
+    background-color: #e57b2c;
+    border-width: 4rem;
+    margin-left: 15rem;
+    margin-top: 2rem;
+   border-radius: 15%;
+}
+
+
+.signup a{
+    font-size: 160%;
+    text-decoration: none;
+    text-align: center;
+    color:#ffffff
 }
 
 /*-------------------------------pentru chestiile din visit us--------------------------------------*/
@@ -184,70 +227,67 @@ img {
     font-size: 170%;
     display: flex;
     margin-left: 25rem;
+    margin-bottom: 5rem;
 }
 
-.body-v{
-    background-color: #e57b2c;
+.backgr{
+    background-image: url("Imagini/imgjngbuna.jpg");
+    background-size: 100rem  auto;
+    
 }
+
+
 
 
 .formular{
     display: table;
-   
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    height: 14rem;
+    width: 40rem;
+    margin-top: 11rem;
 }
 
-div{
+.formular input{
+    width: 5rem;
+    height: 2rem;
+    font-size: 100%;
+}
+
+p{
     display: table-row;
 }
 
 .bar{
     display: table-cell;
-    margin-left: 35rem;
     width: 6rem;
-    height: 2rem;
-    margin-top: 2rem;
-    margin-left: 30rem;
+    height: 3rem;
+    margin-top: 4rem;
+    text-align: center;
     
 }
 
-.fname label{
-    font-size: 140%;
-    margin-right: 3rem;
+.bar input{
+    height: 2rem;
+    width: 13rem;
 }
 
-
-
-.lname label{
-    font-size: 140%;
-    margin-right: 3rem;
+.bar label{
+    font-size: 150%;
 }
 
-
-.activity label{
-    font-size: 140%;
-    margin-right: 3rem;
+.bar1 input{
+    height: 1rem;
+    width: 1rem;
 }
 
-.date label{
-    font-size: 140%;
-    margin-right: 3rem;
+/* -------------------------------------------animals------------------------------------------*/
+.animals img{
+    width: 100rem;
+    height: 33rem;
 }
 
-.number label{
-    font-size: 140%;
-    margin-right: 3rem;
-}
-
-.hour label{
-    font-size: 140%;
-    margin-right: 3rem;
-}
-
-
-.help label{
-    font-size: 140%;
-    margin-right: 3rem;
-}
 
 /* pentru a mari spatiul dintre iteme cand micsorez fereastra*/
 
@@ -269,7 +309,7 @@ div{
         right: 0px;
         height: 35rem;
         top: 6rem;
-        background-color: #5d4954;
+        background-color: #333;
         display: flex;
         flex-direction: column;
         align-items: center;
