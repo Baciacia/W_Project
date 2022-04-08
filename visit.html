@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>Visit Us</title>
 </head>
-<body class="body-v">
+<body">
     <nav class="navbar">
         <div class="logo">
             <a href="/index.html" target="_self">FURRY PARK</a>
@@ -24,7 +24,13 @@
                     <a href="/donate.html" target="_self">DONATE</a>
                 </li>
                 <li>
-                    <a href="#">LANGUAGE</a>
+                    <label></label>
+                    <select name="lng" id="lng">
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="Romanian">Romanian</option>
+                      </select>
                 </li>
             </ul>
 
@@ -36,80 +42,58 @@
         </div>
     </nav>
     <script src="api.js"></script>
-    <div class="backgr">
-        <br>
-        <br>
-        <div class="msg-visit">
-                <h3>In order to visit us you must first fill in the form below!</h3>
-        </div>
 
-        <div class="formular">   
-            <form>
-                <p>
-                    <div class="bar">
-                        <label for="fname">Name:</label><br>
-                        <input type="text"><br>
-                    </div>
-                </p>
-                <br>
-                <p>
-                    <div class="bar">
-                        <label for="lname">PName:</label><br>
-                        <input type="text"><br>
-                    </div>
-                </p>
+    <div class="body-v">
+        <div class="container-v">
+            <div class="header-v">
+                <h2>Create a reservation</h2>
+            </div>
 
-                <br>
-                <p>
-                    <div class="bar">
-                        <label for="activity">Activity:</label><br>
-                        <input type="text"><br>
-                    </div>
-                </p>
+            <form class="form-v" id="form-v">
+                <div class="form-control-v">
+                    <label>Name</label>
+                    <input type="name" placeholder="Name" id="username">
+                </div>
 
-                <br>
-                <p>
-                    <div class="bar">
-                        <label for="number">Persons:</label><br>
-                        <input type="text"><br>
-                    </div>
-                </p>
+                <div class="form-control-v">
+                    <label>Email</label>
+                    <input type="email" placeholder="email" id="email">
+                </div>
 
-                <br>
-                <p>
-                    <div class="bar">
-                        <label for="day">Date:</label><br>
-                        <input type="text"><br>
-                    </div>
-                </p>
+                <div class="form-control-v">
+                    <label>Telephone Number</label>
+                    <input type="text" placeholder="07.." id="number">
+                </div>
 
-                <br>
-                <p>
-                    <div class="bar">
-                        <label for="hour">Hour:</label><br>
-                        <input type="text">
-                    </div>
-                </p>
+                <div class="form-control-v">
+                    <label>The number of people</label>
+                    <input type="persons" placeholder="Max 40" id="persons">
+                </div>
 
-                <br>
-                <p>
-                    <div class="bar1">
-                        <label for="supervisor"></label><br>
-                        <h2>With supervisor ?</h2>
-                        <input type="radio" value="Yes" > 
-                        <label for="answer"> Yes</label> <br>
-                        <input type="radio" value="No" >
-                        <label for="answer">No</label> <br>
-                    </div>
-                </p>
+                <div class="form-control-v">
+                    <label>Date</label>
+                    <input type="date" placeholder="Data" id="data">
+                </div>
+                
+                <div class="form-control-v">
+                    <label>Choose an hour:</label>
+                    <select name="hour" id="hour">
+                        <option value="fh">7:30am - 9:00am</option>
+                        <option value="sh">9:00am - 10:30am</option>
+                        <option value="th">10:30am - 12:00am</option>
+                        <option value="fth">12:00am - 1:30pm</option>
+                        <option value="fvh">1:30pm - 3:00pm</option>
+                        <option value="sxh">3:00pm - 4:30pm</option>
+                        <option value="svh">4:30pm - 6:00pm</option>
+                        <option value="sxh">6:00pm - 7:30pm</option>     
+                      </select>
+                </div>
 
-                <br>
+                <button>Submit</button>
 
-                <input type="submit" value="SUBMIT">
             </form>
         </div>
     </div>
-    <h3>test</h3>
 
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>WEB_PROJECT</title>
 </head>
 
@@ -26,11 +26,15 @@
                     <a href="/donate.html" target="_self">DONATE</a>
                 </li>
                 <li>
-                    <a href="#">LANGUAGE</a>
+                    <label></label>
+                    <select name="lng" id="lng">
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="French">French</option>
+                        <option value="Romanian">Romanian</option>
+                      </select>
                 </li>
             </ul>
-
-
         <div class="meniu">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -50,8 +54,12 @@
         <div class="slide">
             <div class="slide-div">
                 <div class="slide_color2" style="width: 60rem;">
-                <h2>mesaj1</h2>
-            </div>
+                    <h1>Visit us</h1>
+                    <h2>Have a day at the zoo<br> with your furry new friends</h2>
+                    <div class="btn-color2">
+                        <a href="/visit.html">Reservations</a>
+                    </div>
+                </div>
                 <img src="Imagini\cangur.png" style="width: 40%;">
             </div>
         </div>
@@ -60,22 +68,24 @@
         <div class="slide">
             <div class="slide-div">
                 <div class="slide_color3" style="width: 50rem;">
-                    <h2>mesaj</h2>
+                    <h1>Become a member of our zoo family</h1>
+                    <h2>Register on our site so you don't miss anything new</h2>
+                    <div class="btn-color3">
+                        <a href="/visit.html">Sign-Up</a>
+                    </div>
                 </div>
                 <img src="Imagini\papag.png" style="width: 50%;">
             </div>
         </div>
 
         <div class="slide">
-                <div class="slide_title"></div>
-                <img src="Imagini\pasari.jpg" style="width: 100%;">
-            </div>
-        </div>
-
-        <div class="slide">
             <div class="slide-div">
                 <div class="slide_color1" style="width: 50rem;">
-                    <h2>mesaj</h2>
+                    <h1>Help the endangered animals</h1>
+                    <h2>Help build habitats for those animals</h2>
+                    <div class="btn-color1">
+                        <a href="/donate.html">Help the animals</a>
+                    </div>
                 </div>
                     <img src="Imagini\tigru.png" style="width: 50%;">
             </div>
@@ -86,37 +96,11 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-        <!-- aici facem o ?lista? -(ca o matrice cu o linie si 5 coloane, unde a[0][x] este o poza) de poze pe care le vom parcurge cu ajutorul butoanelor-->
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="Imagini\mamifere.jpg" style="width:100%;" onclick="currentSlide(1)" alt="Mamifere">
-            </div>
-
-            <div class="column">
-                <img class="demo cursor" src="Imagini\pesti.webp " style="width:100%;" onclick="currentSlide(2)" alt="Pesti">
-            </div>
-
-            <div class="column">
-                <img class="demo cursor" src="Imagini\reptila.jpg" style="width:100%" onclick="currentSlide(3)" alt="Reptile">
-            </div>
-
-            <div class="column">
-                <img class="demo cursor" src="Imagini\pasari.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pasari">
-            </div>
-
-            <div class="column">
-                <img class="demo cursor" src="Imagini\insecte.jpg" style="width:100%" onclick="currentSlide(5)" alt="Insecte">
-            </div>
-        </div>
-    </div>
-
     <div class="bar-2">
         <div class="infos">
             <h2>Welcome to Furry Park</h2>
         </div>
     </div>
-
-
 
     <div class="footer">
         <div class="signmsg">
@@ -124,7 +108,7 @@
             <h4>Once you have an account we will keep you up to date with what's happening at the Zoo.</h4>
         </div>
         <div class="signup">
-            <a href="#" target="_self">Sign Up</a>
+            <a href="/sigup.html" target="_self">Sign Up</a>
         </div>
     </div>
    

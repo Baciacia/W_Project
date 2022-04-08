@@ -9,7 +9,7 @@
     justify-content: space-around;
     /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
     align-items: center;
-    min-height: 5.4rem;
+    min-height: 5rem;
     background-color:  #333;
     font-family: 'Palette Mosaic', cursive;
 }
@@ -22,7 +22,7 @@
 
 .logo a{
     text-decoration: none;
-    font-size: 180%;
+    font-size: 200%;
     color: #ffffff;
 }
 
@@ -39,7 +39,15 @@
 .nav_list a {
     color: #ffffff;
     text-decoration: none;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    font-size: 130%;
+}
+
+.nav_list select{
+    width: 7rem;
+    height: 2rem;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 120%;
 }
 
 .meniu {
@@ -93,6 +101,7 @@ img {
 
 .slide_color2{
     background-color: #65a051;
+    text-align: left;
 }
 
 .slide_color3{
@@ -128,20 +137,6 @@ img {
   background-color: rgba(46, 44, 44, 0.8);
 }
 
-.row:after {
-    content: "";
-    display: none;
-    clear: both;
-  }
-
-
-  /* 5 coloane una langa alta */
-  .column {
-    float: left;
-    width: 50%;
-    display: none;
-  }
-
   #first-img{
       display: block;
   }
@@ -155,6 +150,107 @@ img {
     opacity: 1;
   }
 
+  .slide_color1 h1{
+    color:#f7f7f7;
+    font-size: 450%;
+    margin-left: 6rem;
+    margin-top: 4rem;
+    font-family: 'Palette Mosaic', cursive;
+    margin-bottom: 3rem;
+
+}
+
+.slide_color1 h2{
+    color:#f7f7f7;
+    font-size: 200%;
+    margin-left: 6rem;
+    font-family: 'Palette Mosaic', cursive;
+    margin-bottom: 4rem;
+}
+
+.slide_color2 h1{
+    color:#333;
+    font-size: 800%;
+    margin-left: 6rem;
+    margin-top: 4rem;
+    font-family: 'Palette Mosaic', cursive;
+
+}
+
+.slide_color3 h1{
+    color:#333;
+    font-size: 400%;
+    margin-left: 6rem;
+    margin-top: 4rem;
+    font-family: 'Palette Mosaic', cursive;
+
+}
+
+.slide_color3 h2{
+    color:#333;
+    font-size: 200%;
+    margin-left: 6rem;
+    margin-top: 4rem;
+    font-family: 'Palette Mosaic', cursive;
+    margin-bottom: 3rem;
+
+}
+
+.slide_color2 h2{
+    color:#333;
+    font-size: 300%;
+    margin-left: 6rem;
+    font-family: 'Palette Mosaic', cursive;
+    margin-bottom: 4rem;
+}
+
+.btn-color{
+    margin-top: 4rem;
+}
+
+.btn-color1 a{
+    text-decoration: none;
+    font-size: 160%;
+    border: 3px solid #f7f7f7;
+    border-radius: 10px;
+    margin-left: 6rem;
+    background-color: #A56124;
+    font-family: 'Palette Mosaic', cursive;
+    height: 3rem;
+    color: #f7f7f7;
+}
+
+.btn-color2 a{
+    text-decoration: none;
+    font-size: 160%;
+    border: 3px solid #f7f7f7;
+    border-radius: 10px;
+    margin-left: 6rem;
+    background-color: #8e44ad;
+    font-family: 'Palette Mosaic', cursive;
+    height: 3rem;
+    color: #f7f7f7;
+
+}
+
+.btn-color3 a{
+    text-decoration: none;
+    font-size: 160%;
+    border: 3px solid #333;
+    border-width: 4px;
+    border-radius: 10px;
+    margin-left: 6rem;
+    background-color: #2C96E5;
+    font-family: 'Palette Mosaic', cursive;
+    height: 3rem;
+    color: #f7f7f7;
+    
+}
+
+.btn-color a:hover{
+    background-color: #ca7f46;
+}
+
 /*------------------Sfarsit imagini-----------------------------*/
 
 /* ------------------Bara cu informatii-------------------------*/
@@ -163,14 +259,14 @@ img {
     display: flex;
     height: 6rem;
     width: auto;
-    background-color: rgb(226, 189, 41);
+    background-color: rgb(226, 161, 41);
     margin-top: 0;
 }
 
 .infos{
     display: flex;
-    font-size: 130%;
-    margin-left: 30rem;
+    font-size: 170%;
+    margin-left: 33rem;
     font-family: 'Palette Mosaic', cursive;
     color: rgb(12, 69, 12);
     margin-top: 1rem;
@@ -187,16 +283,18 @@ img {
     background-color: #333;
 }
 
+
+
 .signmsg h2{
     color: #e57b2c;
     font-size: 330%;
-    margin-left: 15rem;
+    margin-left: 12rem;
 }
 
 .signmsg h4{
     color: #ffffff;
     font-size: 130%;
-    margin-left: 15rem;
+    margin-left: 12rem;
     margin-top: 2rem;
 }
 
@@ -205,10 +303,10 @@ img {
     width: 6rem;
     border-color: #333;
     background-color: #e57b2c;
-    border-width: 4rem;
-    margin-left: 15rem;
+    border: 3px solid #f7f7f7;
+    margin-left: 12rem;
     margin-top: 2rem;
-   border-radius: 15%;
+    border-radius: 10px;
 }
 
 
@@ -221,66 +319,81 @@ img {
 
 /*-------------------------------pentru chestiile din visit us--------------------------------------*/
 
-.msg-visit{
-    text-align: center;
-    color: #333;
-    font-size: 170%;
+.body-v{
+    background-color: #9b59b6;
     display: flex;
-    margin-left: 25rem;
-    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 57rem;
+
 }
 
-.backgr{
-    background-image: url("Imagini/imgjngbuna.jpg");
-    background-size: 100rem  auto;
-    
-}
-
-
-
-
-.formular{
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+.container-v{
     background-color: #ffffff;
-    height: 14rem;
-    width: 40rem;
-    margin-top: 11rem;
+    border-radius: 5px;
+    width: 38rem;
+    max-width: 100%;
+    box-shadow: 0 2px 5px #333;
+    margin-top: 2rem;
 }
 
-.formular input{
-    width: 5rem;
-    height: 2rem;
-    font-size: 100%;
+.header-v{
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 20px 40px;
 }
 
-p{
-    display: table-row;
-}
-
-.bar{
-    display: table-cell;
-    width: 6rem;
-    height: 3rem;
-    margin-top: 4rem;
+.header-v h2{
+    margin: 0;
     text-align: center;
-    
 }
 
-.bar input{
-    height: 2rem;
-    width: 13rem;
+.form-v{
+    padding: 30px 40px;
 }
 
-.bar label{
-    font-size: 150%;
+.form-control-v{
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    position: relative;
 }
 
-.bar1 input{
-    height: 1rem;
-    width: 1rem;
+.form-control-v label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 120%;
 }
+
+.form-control-v input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-control-v select{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-v button{
+    background-color: #8e44ad;
+    border: 2px solid #8e44ad;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+}
+
+
 
 /* -------------------------------------------animals------------------------------------------*/
 .animals img{
