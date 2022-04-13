@@ -428,11 +428,232 @@ img {
 
 /* -------------------------------------------animals------------------------------------------*/
 .animals img{
-    width: 100rem;
+    width: 96rem;
     height: 33rem;
 }
 
+.info-bar{
+    height: 9rem;
+    background-color: #7a5b05;
+    
+}
 
+.info-bar h3{
+    font-size: 270%;
+    text-align: center;
+    font-family: 'Palette Mosaic', cursive;
+}
+
+.anim-list{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    margin-top: 1.7rem;
+    margin-left: 27rem;
+}
+
+.info-bar li{
+    list-style: none;
+    margin-right: 4rem;
+}
+
+.info-bar a{
+    font-size: 2rem;
+    color: #261e1e;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 10px; 
+    font-family: 'Palette Mosaic', cursive;
+}
+
+.info-bar a:hover{
+    background-color: rgb(222, 187, 81);
+}
+
+/* ----------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------DONATE--------------------------------------------*/
+
+.body-d{
+    background-color: #ce99e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 62rem;
+}
+
+.container-d{
+    background-color: #ebebe0;
+    border-radius: 5px;
+    width: 38rem;
+    max-width: 100%;
+    box-shadow: 0 2px 5px #333;
+    margin-top: 2rem;
+    
+}
+
+.container-d h2{
+    color: #7ed321;
+}
+
+.header-d{
+    background-color: #ebebe0;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.header-d h2{
+    margin: 0;
+    text-align: center;
+    color: #7ed321;
+    font-size: 2.5rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px dotted #333;
+
+}
+
+.form-d{
+    padding: 30px 40px;
+    position: relative;
+}
+
+
+.account {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.account input[type="name"]{
+    width: 12rem;
+    height: 3rem;
+    margin-left: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 120%;
+}
+
+.account input[type="email"]{
+    width: 26.8rem;
+    height: 3rem;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 120%;
+}
+
+.cause{
+    position:relative;
+}
+
+.cause input{
+    width: 12rem;
+    height: 3rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 110%;
+}
+
+.cause select{
+    width: 12rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 110%;
+}
+
+.t-dob{
+    display:flex;
+}
+
+.t-dob h2{
+    margin-right: 9rem;
+}
+
+.form-dob{
+    position: relative;
+    display: flex;
+}
+
+.form-dob input[type="text"]{
+    width: 4rem;
+    height: 3rem;
+    font-size: 120%;
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-dob input[type="radio"]{
+   margin-left: 4rem;
+   margin-top: 2rem;
+}
+
+.form-dob label[for="var1"]{
+    margin-left: 0.5rem;
+    margin-top: 1.7rem;
+}
+
+.form-dob label[for="var2"]{
+    margin-left: 0.5rem;
+    margin-top: 1.7rem;
+}
+
+.details{
+    position: relative;
+}
+
+.details #cn{
+    width: 27rem;
+    height: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 2rem;
+    font-size: 110%;
+}
+
+.details #cvc{
+    width: 12rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+    font-size: 110%;
+}
+
+.details #mm{
+    width: 3rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.details #yyyy{
+    width: 4rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.form-d button{
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 12rem;
+    width:7rem;
+    height: 2rem;
+    background-color: #7ed321;
+    color:#ffffff;
+    font-size: 120%;
+
+}
+
+
+/*------------------------------------------------------------------------------------------------*/
 /* pentru a mari spatiul dintre iteme cand micsorez fereastra*/
 
 @media screen and (max-width: 1200px) {

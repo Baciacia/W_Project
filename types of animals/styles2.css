@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
+    align-items: center;
+    min-height: 5rem;
+    background-color:  #333;
+    font-family: 'Palette Mosaic', cursive;
+}
+
+.logo {
+    color: rgb(218, 212, 212);
+    letter-spacing: 7px;
+    font-size: 100%;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav_list li {
+    list-style: none;
+}
+
+.nav_list a {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 130%;
+}
+
+.nav_list select{
+    width: 7rem;
+    height: 2rem;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 120%;
+}
+
+.meniu {
+    display: none;
+    /* sa nu se vada in mod normal*/
+    cursor: pointer;
+}
+
+
+/* aici fac meniul ala cu 3 linii ce arata ca un burger*/
+
+.meniu div {
+    background-color: #ffffff;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+}
