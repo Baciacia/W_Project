@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+/* --------------------------------------------------bara de navigare----universal---------------------------------------*/
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -66,7 +66,7 @@
     margin: 5px;
 }
 
-/*-----------------------Imaginile principale------------------------*/
+/*---------------------------------------------------Imaginile principale----------------------------------------------------*/
 
 /* am setat ca toate imaginile sa aibe aceeasi dimensiune*/
 
@@ -152,7 +152,7 @@ img {
 
   .slide_color1 h1{
     color:#f7f7f7;
-    font-size: 450%;
+    font-size: 370%;
     margin-left: 6rem;
     margin-top: 4rem;
     font-family: 'Palette Mosaic', cursive;
@@ -162,7 +162,7 @@ img {
 
 .slide_color1 h2{
     color:#f7f7f7;
-    font-size: 200%;
+    font-size: 180%;
     margin-left: 6rem;
     font-family: 'Palette Mosaic', cursive;
     margin-bottom: 4rem;
@@ -251,9 +251,9 @@ img {
     background-color: #ca7f46;
 }
 
-/*------------------Sfarsit imagini-----------------------------*/
+/*---------------------------------------------------------Sfarsit imagini-----------------------------------------------------*/
 
-/* ------------------Bara cu informatii-------------------------*/
+/* -------------------------------------------------------Bara cu informatii----------------------------------------------------*/
 
 .bar-2{
     display: flex;
@@ -272,6 +272,8 @@ img {
     margin-top: 1rem;
 }
 
+
+/*--------------------------------------------------------------Footer----------------------------------------------------------*/
 .sign-up{
     margin-top: 4rem;
     font-size: 110%;
@@ -279,7 +281,7 @@ img {
 }
 
 .footer{
-    height: 15rem;
+    height: 19rem;
     background-color: #333;
 }
 
@@ -317,7 +319,7 @@ img {
     color:#ffffff
 }
 
-/*-------------------------------pentru chestiile din visit us--------------------------------------*/
+/*-----------------------------------------------------pentru chestiile din visit us------------------------------------------------*/
 
 .body-v{
     background-color: #9b59b6;
@@ -654,18 +656,68 @@ img {
 
 
 /*------------------------------------------------------------------------------------------------*/
-/* pentru a mari spatiul dintre iteme cand micsorez fereastra*/
+/* pentru a mari spatiul dintre iteme cand micsorez fereastra si totodata pentru pozele din carusel, mesajul de salut, si butoanele
+de reservare, donare, si inregistrare*/
 
 @media screen and (max-width: 1200px) {
     .nav_list {
-        width: 63%;
+        width: 73%;
     }
+    .infos{
+        margin-left: 18rem;
+        font-size: 140%;
+    }
+
+    img#cangur{
+        height: auto;
+    }
+
+    img#tigru{
+        height: auto;
+    }
+
+    img#pasari{
+        height: auto;
+    }
+
+    img#primapasari{
+        height: 30rem;
+    }
+
+    .slide_color2 h2{
+        font-size: 230%;
+    }
+    .slide_color2 h1{
+        font-size: 465%;
+    }
+
+    .slide_color1 h2{
+        font-size: 155%;
+    }
+    .slide_color1 h1{
+        font-size: 285%;
+    }
+
+    .slide_color3 h2{
+        font-size: 145%;
+    }
+    .slide_color3 h1{
+        font-size: 245%;
+    }
+    .slide-div{
+        height: 30rem;
+    }
+
+    .footer{
+        height: 24rem;
+    }
+
 }
 
 
-/* cand fereastra ajunge la o anumita marime se vor petrecere urmatoarele*/
+/* pentru bara de navigare   --- chestie universala pentru toate html urile*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     body {
         overflow-x: hidden;
     }
@@ -681,14 +733,133 @@ img {
         width: 35%;
         transform: translateX(100%);
         transition: transform 0.4s ease-in;
+        z-index: 2;
     }
+
+    img#primapasari{
+        z-index: 1;
+    }
+
     .nav_list li {
         opacity: 0;
     }
     .meniu {
         display: block;
     }
+
+    .footer{
+        height: 24rem;
+    }
+    
 }
+
+/*------------------------------------------------INDEX.HTML--------------------------------------------------------------*/
+/* pentru caruselul de imagini; il fac responsive   si pentru bara a doua unde avem mesajul de salut*/
+@media screen and (max-width: 800px){
+
+    #slide1{
+        height: 31rem;
+        background-color: #2468a5;
+    }
+
+    #slide2{
+        height: 31rem;
+        background-color: #65a051;
+    }
+
+    #slide3{
+        height: 31rem;
+        background-color: #e57b2c;
+    }
+
+    img#primapasari{
+        height: 31rem;
+    }
+
+    img#pasari{
+        display: none;
+    }
+
+    img#tigru{
+        display: none;
+    }
+
+    img#cangur{
+        display: none;
+    }
+    .slide_color2 h2{
+        font-size: 230%;
+    }
+    .slide_color2 h1{
+        font-size: 465%;
+    }
+
+    .slide_color1 h2{
+        font-size: 155%;
+    }
+    .slide_color1 h1{
+        font-size: 285%;
+    }
+
+    .slide_color3 h2{
+        font-size: 155%;
+    }
+    .slide_color3 h1{
+        font-size: 285%;
+    }
+
+    .bar-2{
+        width: 100%;
+    }
+
+    .btn-color1 a{
+        margin-left: 9rem;
+    }
+
+    .btn-color2 a{
+        margin-left: 10.6rem;
+    }
+
+    .btn-color3 a{
+        margin-left:12rem;
+    }
+
+    .infos{
+        margin-left: 4rem;
+        font-size: 140%;
+    }
+
+}
+
+/*@media  screen and (max-width: 1000px) and (min-width: 801px)  {
+    .slide-color2{
+        height: 15rem;
+    }
+    .slide-color1{
+        height: 15rem;
+    }
+    .slide-color3{
+        height: 15rem;
+    }
+}*/
+
+/*pentru footer*/
+@media screen and (max-width:800px) {
+    .footer{
+        height: 21rem;
+    }
+
+    .signmsg h2{
+        font-size:270%;
+        margin-left: 6rem;
+    }
+
+    .signmsg h4{
+        font-size: 120%;
+        margin-left: 4rem;
+    }
+}
+/*-------------------------------------------------------FI*/
 
 .nav_list-active {
     transform: translateX(0%);
