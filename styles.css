@@ -420,6 +420,21 @@ img {
     text-decoration: none;
 }
 
+.buttonSip {
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: #0d7dee;
+    border: 2px solid #8e44ad;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+}
+
 .sign h4{
     margin-top: 3rem;
     font-size: 130%;
