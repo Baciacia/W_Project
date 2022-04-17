@@ -440,15 +440,6 @@ img {
     font-size: 130%;
 }
 
-.signin button{
-    margin-top: 2rem;
-    background-color: #0d7dee;
-    border: 2px solid #8e44ad;
-    border-radius: 15px;
-    color: #fff;
-    font-size: 1rem;
-    padding: 10px;
-}
 
 .signin a{
     text-decoration: none;
