@@ -50,26 +50,26 @@
             <h2>Login</h2>
         </div>
 
-        <form class="form-v" action="#">
+        <form class="form-v" action="signup.php" method="post">
 
             <div class="form-control-v">
                 <label>Full Name</label>
-                <input type="text" placeholder="John Doe" id="fn">
+                <input type="text" name="txtUsername" placeholder="John Doe" id="txtUsername">
             </div>
 
             <div class="form-control-v">
                 <label>Email</label>
-                <input type="email" placeholder="blabla@bla.com" id="rmail">
+                <input type="email" name="txtMail" placeholder="blabla@bla.com" id="txtMail">
             </div>
 
             <div class="form-control-v">
                 <label>Password</label>
-                <input type="password" placeholder="You have to use minimum 8 characters and a number" id="psw">
+                <input type="password" name="txtPassword" placeholder="You have to use minimum 8 characters and a number" id="txtPassword">
             </div>
 
             <div class="form-control-v">
                 <label> Repeat Password </label>
-                <input type="password" placeholder="Don't cheat !" id="rpsw">
+                <input type="password" name="rpsw" placeholder="Don't cheat !" id="rpsw">
             </div>
 
             <button>Sign Up</button>
