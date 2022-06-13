@@ -1,0 +1,228 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* --------------------------------------------------bara de navigare----universal---------------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
+    align-items: center;
+    min-height: 5rem;
+    background-color:  #333;
+    font-family: 'Palette Mosaic', cursive;
+}
+
+.logo {
+    color: rgb(218, 212, 212);
+    letter-spacing: 7px;
+    font-size: 100%;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav_list li {
+    list-style: none;
+}
+
+.nav_list a {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 130%;
+}
+
+.nav_list select{
+    width: 7rem;
+    height: 2rem;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 120%;
+}
+
+.meniu {
+    display: none;
+    /* sa nu se vada in mod normal*/
+    cursor: pointer;
+}
+
+
+/* aici fac meniul ala cu 3 linii ce arata ca un burger*/
+
+.meniu div {
+    background-color: #ffffff;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+}
+
+
+.body-s{
+    background-color: #2468a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42rem;
+
+}
+
+.buttonSip {
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: #0d7dee;
+    border: 2px solid #8e44ad;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.sign h4{
+    margin-top: 3rem;
+    font-size: 130%;
+}
+
+
+.signin a{
+    text-decoration: none;
+}
+
+
+.container-v{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 38rem;
+    max-width: 100%;
+    box-shadow: 0 2px 5px #333;
+    margin-top: 2rem;
+}
+
+.header-v{
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.header-v h2{
+    margin: 0;
+    text-align: center;
+}
+
+.form-v{
+    padding: 30px 40px;
+}
+
+.form-control-v{
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control-v label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 120%;
+}
+
+.form-control-v input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-control-v select{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+#btn-submit{
+    background-color: #ad46d6;
+    border: 2px solid #474448;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-v button{
+    background-color: #4684d6;
+    border: 2px solid #474448;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+}
+
+
+
+
+
+/* pentru bara de navigare   --- chestie universala pentru toate html urile*/
+
+@media screen and (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav_list {
+        position: absolute;
+        right: 0px;
+        height: 35rem;
+        top: 5rem;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+        z-index: 2;
+    }
+
+    .nav_list li {
+        opacity: 0;
+    }
+    .meniu {
+        display: block;
+    }
+    
+}
+
+.nav_list-active {
+    transform: translateX(0%);
+}
+
+@keyframes navlistFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

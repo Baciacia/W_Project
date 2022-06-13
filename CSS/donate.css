@@ -1,0 +1,395 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* --------------------------------------------------bara de navigare----universal---------------------------------------*/
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
+    align-items: center;
+    min-height: 5rem;
+    background-color:  #333;
+    font-family: 'Palette Mosaic', cursive;
+}
+
+.logo {
+    color: rgb(218, 212, 212);
+    letter-spacing: 7px;
+    font-size: 100%;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 200%;
+    color: #ffffff;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.nav_list li {
+    list-style: none;
+}
+
+.nav_list a {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 130%;
+}
+
+.nav_list select{
+    width: 7rem;
+    height: 2rem;
+    font-family: 'Palette Mosaic', cursive;
+    font-size: 120%;
+}
+
+.meniu {
+    display: none;
+    /* sa nu se vada in mod normal*/
+    cursor: pointer;
+}
+
+
+/* aici fac meniul ala cu 3 linii ce arata ca un burger*/
+
+.meniu div {
+    background-color: #ffffff;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+}
+
+
+.body-d{
+    background-color: #ce99e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 62rem;
+}
+
+.container-d{
+    background-color: #ebebe0;
+    border-radius: 5px;
+    width: 38rem;
+    max-width: 100%;
+    box-shadow: 0 2px 5px #333;
+    margin-top: 2rem;
+    
+}
+
+.container-d h2{
+    color: #7ed321;
+}
+
+.header-d{
+    background-color: #ebebe0;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.header-d h2{
+    margin: 0;
+    text-align: center;
+    color: #7ed321;
+    font-size: 2.5rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px dotted #333;
+
+}
+
+.form-d{
+    padding: 30px 40px;
+    position: relative;
+}
+
+
+.account {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.account input[type="name"]{
+    width: 12rem;
+    height: 3rem;
+    margin-left: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 120%;
+}
+
+.account input[type="email"]{
+    width: 26.8rem;
+    height: 3rem;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 120%;
+}
+
+.cause{
+    position:relative;
+}
+
+.cause input{
+    width: 12rem;
+    height: 3rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 110%;
+}
+
+.cause select{
+    width: 12rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 110%;
+}
+
+.t-dob{
+    display:flex;
+}
+
+.t-dob h2{
+    margin-right: 9rem;
+}
+
+.form-dob{
+    position: relative;
+    display: flex;
+}
+
+.form-dob input[type="text"]{
+    width: 4rem;
+    height: 3rem;
+    font-size: 120%;
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#finput{
+    margin-left: 2.5rem;
+}
+.form-dob input[type="radio"]{
+   margin-left: 4rem;
+   margin-top: 2rem;
+}
+
+.form-dob label[for="var1"]{
+    margin-left: 0.5rem;
+    margin-top: 1.7rem;
+}
+
+.form-dob label[for="var2"]{
+    margin-left: 0.5rem;
+    margin-top: 1.7rem;
+}
+
+.details{
+    position: relative;
+}
+
+.details #cn{
+    width: 27rem;
+    height: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 2rem;
+    font-size: 110%;
+}
+
+.details #cvc{
+    width: 12rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-align: center;
+    font-size: 110%;
+}
+
+.details #mm{
+    width: 3rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.details #yyyy{
+    width: 4rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+
+.form-d button{
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 12rem;
+    width:7rem;
+    height: 2rem;
+    background-color: #7ed321;
+    color:#ffffff;
+    font-size: 120%;
+
+}
+
+
+/* pentru bara de navigare   --- chestie universala pentru toate html urile*/
+
+@media screen and (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav_list {
+        position: absolute;
+        right: 0px;
+        height: 35rem;
+        top: 5rem;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 35%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+        z-index: 2;
+    }
+
+    img#primapasari{
+        z-index: 1;
+    }
+
+    .nav_list li {
+        opacity: 0;
+    }
+    .meniu {
+        display: block;
+    }
+
+    .footer{
+        height: 24rem;
+    }
+    
+}
+
+
+@media screen and (max-width:800px) {
+    .container-d{
+        width: 28rem;
+        margin-bottom: 10rem;
+    }
+
+    .account input[type="email"]{
+        width: 20rem;
+        height: 3rem;
+        margin-left: 2.5rem;
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 140%;
+    }
+
+    .cause select{
+        width: 12rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-top: 0.8rem;
+        font-size: 90%;
+        margin-left: 2.5rem
+    }
+
+    .details #cn{
+        width: 20rem;
+        height: 3rem;
+        margin-top: 1rem;
+        text-align: center;
+        margin-left: 2rem;
+        font-size: 110%;
+    }
+    
+    .details #cvc{
+        width: 10rem;
+        height: 3rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        text-align: center;
+        font-size: 110%;
+    }
+    
+    .details #mm{
+        width: 3rem;
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .details #yyyy{
+        width: 4rem;
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    .form-d button{
+        margin-top: 2rem;
+        text-align: center;
+        margin-left: 8rem;
+        width:7rem;
+        height: 2rem;
+        background-color: #7ed321;
+        color:#ffffff;
+        font-size: 120%;
+    }
+
+    .t-dob h2{
+        margin-right: 11rem;
+        font-size: 140%;
+    }
+
+    .form-dob input[type="text"]{
+        width: 3rem;
+        height: 3rem;
+        font-size: 100%;
+        margin-top: 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    #finput{
+        margin-left: 2.5rem;
+    }
+
+    .form-dob input[type="radio"]{
+       margin-left: 2rem;
+       margin-top: 2rem;
+    }
+
+}
+
+.nav_list-active {
+    transform: translateX(0%);
+}
+
+@keyframes navlistFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
