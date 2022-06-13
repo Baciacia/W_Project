@@ -1,26 +1,3 @@
-// bucata asta face ca bara de navigare sa fie dinamica
-
-const navSlide = () => {
-    const meniu = document.querySelector('.meniu');
-    const nav = document.querySelector('.nav_list');
-    const navlist = document.querySelectorAll('.nav_list li')
-
-    meniu.addEventListener('click', () => {
-        //Toggle nav
-        nav.classList.toggle('nav_list-active');
-        //Animate list
-        navlist.forEach((link, index) =>{
-            if(link.style.animation) {
-                link.style.animation = '';
-            }else{
-                link.style.animation = `navlistFade 0.5s ease forwards ${index/7 + 0.3}s`
-            }
-        });
-    });
-}
-//-------------------------------------------------------------------------------------------------------------------------------------
-
-navSlide(); //apelarea functiei
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 // mai jos avem codul care face posibil schimbarea imaginei prin apasarea a doua sageti
