@@ -10,72 +10,73 @@
     <title>Visit Us</title>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html" target="_self">FURRY PARK</a>
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html" target="_self">FURRY PARK</a>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a href="visit.html" target="_self">VISIT US</a>
+        </li>
+        <li>
+            <a href="animals.html" target="_self">ANIMALS</a>
+        </li>
+        <li>
+            <a href="donate.html" target="_self">DONATE</a>
+        </li>
+        <li>
+            <label></label>
+            <select name="lng" id="lng">
+                <option value="English">English</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <option value="Romanian">Romanian</option>
+            </select>
+        </li>
+    </ul>
+
+
+    <div class="meniu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+<script src="../JAVASCRIPT/api.js"></script>
+
+<div class="body-s">
+    <div class="container-v">
+        <div class="header-v">
+            <h2>Login</h2>
         </div>
-        <ul class="nav_list">
-            <li>
-                <a href="visit.html" target="_self">VISIT US</a>
-            </li>
-            <li>
-                <a href="animals.html" target="_self">ANIMALS</a>
-            </li>
-            <li>
-                <a href="donate.html" target="_self">DONATE</a>
-            </li>
-            <li>
-                <label></label>
-                <select name="lng" id="lng">
-                    <option value="English">English</option>
-                    <option value="Spanish">Spanish</option>
-                    <option value="French">French</option>
-                    <option value="Romanian">Romanian</option>
-                </select>
-            </li>
-        </ul>
 
+        <form class="form-v" action="../PHP/server.php" method="post">
 
-        <div class="meniu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-    <script src="/JAVASCRIPT/api.js"></script>
-
-    <div class="body-s">
-        <div class="container-v">
-            <div class="header-v">
-                <h2>Login</h2>
+            <div class="form-control-v">
+                <label>Username or Email</label>
+                <input type="text" name="txtUsername" placeholder="John Doe@blabla.com" id="Username">
             </div>
 
-            <form class="form-v" action="#">
+            <div class="form-control-v">
+                <label>Password</label>
+                <input type="password" name="txtPassword" placeholder="You have to use minimum 8 characters and a number" id="Password">
+            </div>
 
-                <div class="form-control-v">
-                    <label>Email</label>
-                    <input type="email" placeholder="blabla@bla.com" id="email">
-                </div>
+            <div class="form-control-v">
+                <button type="submit" class="btn" name="login_user">Sign In</button>
+            </div>
 
-                <div class="form-control-v">
-                    <label>Password</label>
-                    <input type="password" placeholder="You have to use minimum 8 characters and a number" >
-                </div>
+            <div class="sign">
+                <h4>Don't have an account? Register now!</h4>
+            </div>
+            <div>
+                <a class="buttonSup" href="signup.html" target="_self">Sign-up</a>
+            </div>
 
+        </form>
 
-                <button>Sign In</button>
-
-                <div class="sign">
-                    <h4>Don't have an account? Register now!</h4>
-                </div>
-                <div>
-                    <a class="buttonSup" href="signup.html" target="_self">Sign-up</a>
-                </div>
-                
-            </form>
-            
-        </div>   
     </div>
-    </body>
+</div>
+</body>
 
 </html>
