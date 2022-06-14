@@ -21,7 +21,7 @@ ul{
     position: relative;
     top: 0;
     width: 100%;
-    height: 6rem;
+    height: 5.5rem;
 }
 
 .logo{
@@ -158,7 +158,7 @@ ul{
     margin-bottom: 2rem;
 }
 
-.account input[type="name"]{
+.account input[type="text"]{
     width: 12rem;
     height: 3rem;
     margin-left: 2.5rem;
