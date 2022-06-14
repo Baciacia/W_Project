@@ -3,70 +3,110 @@
     padding: 0px;
     box-sizing: border-box;
 }
-/* --------------------------------------------------bara de navigare----universal---------------------------------------*/
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    /* le aliniaza da le pune si niste spatiu gen inainte intre si dupa*/
-    align-items: center;
-    min-height: 5rem;
-    background-color:  #333;
-    font-family: 'Palette Mosaic', cursive;
-}
 
-.logo {
-    color: rgb(218, 212, 212);
-    letter-spacing: 7px;
-    font-size: 100%;
-}
-
-.logo a{
+a{
     text-decoration: none;
-    font-size: 200%;
-    color: #ffffff;
 }
-
-.nav_list {
-    display: flex;
-    justify-content: space-around;
-    width: 45%;
-}
-
-.nav_list li {
+ul{
     list-style: none;
 }
 
-.nav_list a {
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 4px;
-    font-size: 130%;
+.body{
+    height: auto;
 }
 
-.nav_list select{
-    width: 7rem;
-    height: 2rem;
-    font-family: 'Palette Mosaic', cursive;
-    font-size: 120%;
+/* --------------------------------------------------bara de navigare----universal---------------------------------------*/
+.header{
+    background-color:#333;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 6rem;
 }
 
-.meniu {
-    display: none;
-    /* sa nu se vada in mod normal*/
+.logo{
+    display: inline-block;
+    color:rgb(218, 212, 212);
+    font-size: 50px;
+    margin-left: 2rem;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #333;
+    overflow: hidden;
+    z-index: 99;
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: rgb(218, 212, 212);
+    font-size: 250%;
+    margin-top: 5rem;
+}
+.menu a:hover{
+    background-color: grey;
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
     cursor: pointer;
-}
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
 
-
-/* aici fac meniul ala cu 3 linii ce arata ca un burger*/
-
-.meniu div {
-    background-color: #ffffff;
-    width: 25px;
+.hamb-line {
+    background: white;
+    display: block;
     height: 3px;
-    margin: 5px;
+    position: relative;
+    width: 30px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
 }
 
+.side-menu {
+    display: none;
+} /* Hide checkbox */
 
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
 .animals img{
     width: 96rem;
     height: 33rem;
@@ -239,17 +279,28 @@
     
 }
 
-.nav_list-active {
-    transform: translateX(0%);
-}
-
-@keyframes navlistFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
+/* Responsiveness */
+@media (min-width: 900px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: sticky;
+        float: right;
+        width: fit-content;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
+
+    .menu li{
+        float: left;
+        top:0;
+    }
+    .menu a{
+        margin-top:  -1.2rem;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: grey;
+    }
+    .hamb{
+        display: none;
     }
 }
