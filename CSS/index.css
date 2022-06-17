@@ -325,7 +325,7 @@ img {
 }
 
 .footer{
-    height: 16rem;
+    height: auto;
     background-color: #333;
 }
 

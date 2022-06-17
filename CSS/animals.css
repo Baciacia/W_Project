@@ -279,6 +279,12 @@ ul{
     
 }
 
+@media screen and (max-width: 600px){
+    .header a{
+        font-size: 250%;
+    }
+}
+
 /* Responsiveness */
 @media (min-width: 900px) {
     .nav{

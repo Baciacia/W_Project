@@ -12,7 +12,7 @@ ul{
 }
 
 .body{
-    height: auto;
+    height: 100%;
 }
 
 /* --------------------------------------------------bara de navigare----universal---------------------------------------*/
@@ -129,8 +129,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 42rem;
-
+    min-height: 56rem;
 }
 
 .sign h4{
@@ -147,9 +146,9 @@ ul{
     background-color: #ffffff;
     border-radius: 5px;
     width: 38rem;
-    max-width: 100%;
     box-shadow: 0 2px 5px #333;
     margin-top: 2rem;
+    margin-bottom: 8rem;
 }
 
 .header-v{
@@ -223,29 +222,35 @@ ul{
 /* pentru bara de navigare   --- chestie universala pentru toate html urile*/
 
 @media screen and (max-width: 900px) {
-    body {
-        overflow-x: hidden;
-    }
-    .nav_list {
-        position: absolute;
-        right: 0px;
-        height: 35rem;
-        top: 5rem;
-        background-color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 35%;
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in;
-        z-index: 2;
-    }
     .nav_list li {
         opacity: 0;
     }
     .meniu {
         display: block;
     }
+}
+
+@media screen and (max-width: 400px)
+{
+    .header a{
+        font-size: 250%;
+    }
+    .container-v{
+        width: 16rem;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .container-v{
+        background-color: #ffffff;
+        border-radius: 5px;
+        width: 21rem;
+        box-shadow: 0 2px 5px #333;
+        margin-top: 2rem;
+    }
+
 }
 
 /* Responsiveness */

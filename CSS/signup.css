@@ -113,7 +113,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 42rem;
+    min-height: 60rem;
 
 }
 
@@ -226,23 +226,6 @@ ul{
 /* pentru bara de navigare   --- chestie universala pentru toate html urile*/
 
 @media screen and (max-width: 900px) {
-    body {
-        overflow-x: hidden;
-    }
-    .nav_list {
-        position: absolute;
-        right: 0px;
-        height: 35rem;
-        top: 5rem;
-        background-color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 35%;
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in;
-        z-index: 2;
-    }
 
     .nav_list li {
         opacity: 0;
@@ -251,6 +234,21 @@ ul{
         display: block;
     }
     
+}
+
+@media screen and (max-width: 800px){
+    .container-v{
+        width: 23rem;
+    }
+    .header a{
+        font-size: 250%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container-v{
+        width: 17rem;
+    }
 }
 
 /* Responsiveness */
