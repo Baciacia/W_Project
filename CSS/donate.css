@@ -413,12 +413,151 @@ ul{
         margin-left: 2.5rem;
     }
 
-    .form-dob input[type="radio"]{
-       margin-left: 2rem;
-       margin-top: 2rem;
+
+}
+
+@media screen and (max-width:600px){
+    .container-d{
+        width: 21rem;
+    }
+
+    .account input[type="email"]{
+        width: 9rem;
+        height: 2.5rem;
+        margin-left: 2.5rem;
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 140%;
+    }
+
+    .details #cn{
+        width: 9rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+        text-align: center;
+        margin-left: 2rem;
+        font-size: 110%;
+    }
+
+    .details #cvc{
+        width: 4rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        text-align: center;
+        font-size: 110%;
+    }
+
+    .account input[type="text"]{
+        width: 9rem;
+        height: 2.5rem;
+        margin-left: 2.5rem;
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 120%;
+    }
+
+    .cause input{
+        width: 9rem;
+        height: 3rem;
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        font-size: 110%;
+    }
+    
+    .cause select{
+        width: 9rem;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 110%;
+    }
+
+    .form-d button{
+        margin-top: 2rem;
+        text-align: center;
+        margin-left: 4.5rem;
+        width:7rem;
+        height: 2rem;
+        background-color: #7ed321;
+        color:#ffffff;
+        font-size: 120%;
+    
     }
 
 }
+
+@media screen and (max-width:422px){
+    
+    .container-d{
+        width: 17rem;;
+    }
+
+   
+
+    .account input[type="email"]{
+        margin-left: 1.5rem;
+        font-size: 80%;
+    }
+
+    .details #cn{
+        margin-left: 1.5rem;
+        font-size: 80%;
+    }
+
+    .details #cvc{   
+        margin-left: 1.5rem;
+    }
+
+    .account input[type="text"]{   
+        margin-left: 1.5rem;
+    }
+
+    .form-d button{  
+        margin-left: 2.5rem;
+        font-size: 120%; 
+    }
+
+    .cause input{   
+        margin-left: 1.5rem;
+    }
+    
+    .cause select{
+        margin-left: 1.5rem;
+        font-size: 80%;
+    }
+
+    .header a{
+        font-size: 260%;
+    }
+    .details #cvc{
+        width: 3rem;
+        height: 2.5rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        text-align: center;
+        font-size: 110%;
+    }
+
+    .details #mm{
+        width: 3rem;
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+    
+    .details #yyyy{
+        width: 4rem;
+        height: 2rem;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+}
+
 
 /* Responsiveness */
 @media (min-width: 900px) {

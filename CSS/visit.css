@@ -209,7 +209,7 @@ ul{
 @media screen and (max-width:800px) {
     .container-v{
         width: 28rem;
-        margin-bottom: 10rem;
+        margin-bottom: 8rem;
     }
 
     .body-v{
@@ -217,14 +217,24 @@ ul{
     }
 }
 
-/* pentru bara de navigare   --- chestie universala pentru toate html urile*/
 
-@media screen and (max-width: 900px) {
-  
-    .footer{
-        height: 15rem;
+@media screen and (max-width:600px){
+    .header a{
+        font-size: 260%;
     }
-    
+
+    .container-v{
+        width: 21rem;
+        margin-bottom: 8rem;
+    }
+} 
+
+
+@media screen and (max-width:421px){
+    .container-v{
+        width: 17rem;
+        margin-bottom: 8rem;
+    }
 }
 
 /* Responsiveness */

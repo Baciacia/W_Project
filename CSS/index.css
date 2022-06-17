@@ -312,6 +312,8 @@ img {
     font-family: 'Palette Mosaic', cursive;
     color: rgb(12, 69, 12);
     margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -360,28 +362,6 @@ img {
     color:#ffffff
 }
  /*-----------------------------------------------------------------------------------------------------------------------------------*/
-
- /* pentru bara de navigare  */
-
-@media screen and (max-width: 900px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .nav_list li {
-        opacity: 0;
-    }
-    .meniu {
-        display: block;
-    }
-
-    .footer{
-        height: 11rem;
-    }
-    
-}
-
-
 
 
 /* pentru caruselul de imagini; il fac responsive   si pentru bara a doua unde avem mesajul de salut*/
@@ -456,6 +436,53 @@ de reservare, donare, si inregistrare*/
 }
 
 
+ /* pentru bara de navigare  */
+
+@media screen and (max-width: 900px) {
+
+    .nav_list li {
+        opacity: 0;
+    }
+    .meniu {
+        display: block;
+    }
+
+    .infos h2{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 150%;
+    }
+
+    .signmsg h2{
+        color: #e57b2c;
+        font-size: 250%;
+        margin-left: 20%;
+        
+    }
+    
+    .signmsg h4{
+        color: #ffffff;
+        font-size: 120%;
+        margin-left: 15%;
+        margin-top: 2rem;
+     
+    }
+
+    .signup{
+        height: 2.5rem;
+        width: 6rem;
+        border-color: #333;
+        background-color: #e57b2c;
+        border: 3px solid #f7f7f7;
+        margin-left: 15%;
+        margin-top: 2rem;
+        border-radius: 10px;
+    }
+
+}
+
+
+
 @media screen and (max-width: 800px){
 
     #slide1{
@@ -513,43 +540,164 @@ de reservare, donare, si inregistrare*/
         width: 100%;
     }
 
-    .btn-color1 a{
-        margin-left: 9rem;
-    }
-
-    .btn-color2 a{
-        margin-left: 10.6rem;
-    }
-
-    .btn-color3 a{
-        margin-left:12rem;
-    }
-
     .infos{
         margin-left: 4rem;
         font-size: 140%;
     }
 
-}
-
-/*pentru footer*/
-
-@media screen and (max-width:800px) {
     .footer{
-        height: 21rem;
+        height: 15rem;
     }
 
     .signmsg h2{
-        font-size:270%;
-        margin-left: 6rem;
+        font-size:220%;
+        margin-left: 8rem;
+        
     }
 
     .signmsg h4{
+        font-size: 110%;
+        margin-left: 6rem;
+       
+    }
+
+    .infos h2{
+        margin-left: 8rem;
+        font-size: 130%;
+    }
+
+    .signup{
+        height: 2rem;
+        width: 5rem;
+        border-color: #333;
+        background-color: #e57b2c;
+        border: 3px solid #f7f7f7;
+        margin-left: 15%;
+        
+        margin-top: 2rem;
+        border-radius: 10px;
+    }
+    .signup a{
+        font-size: 125%;
+    }
+
+}
+
+@media screen and (max-width: 635px)
+{
+    .signmsg h2{
+        color: #e57b2c;
+        font-size: 190%;
+        margin-left: 17%;
+        
+    }
+    
+    .signmsg h4{
+        color: #ffffff;
+        font-size: 110%;
+        margin-left: 15%;
+        margin-top: 2rem;
+        
+    }
+    .infos h2{
+        margin-left: 5rem;
+        
         font-size: 120%;
-        margin-left: 4rem;
+    }
+    .header a{
+        font-size: 270%;
     }
 }
 
+
+@media screen and (max-width: 510px)
+{
+    .infos h2{
+        margin-left: 3rem;
+        font-size: 110%;
+    }
+
+    .signmsg h2{
+        color: #e57b2c;
+        font-size: 170%;
+        margin-left: 13%;
+        
+    }
+    
+    .signmsg h4{
+        color: #ffffff;
+        font-size: 110%;
+        margin-left: 13%;
+        margin-top: 2rem;
+        
+    }
+    .header a{
+        font-size: 250%;
+    }
+
+    .slide_color2 h1{
+        font-size: 300%;
+        margin-left: 17%;
+    }
+    .slide_color2 h2{
+        font-size: 200%;
+        margin-top: 1rem;
+        margin-left: 17%;
+    }
+    .btn-color2 a{
+        font-size: 150%;
+        margin-left: 25%;
+
+    } 
+
+    .slide_color3 h1{
+        font-size: 270%;
+        margin-left: 17%;
+    }
+    .slide_color3 h2{
+        font-size: 160%;
+        margin-top: 1rem;
+        margin-left: 17%;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+    .infos h2{
+        margin-left: 1rem;
+        font-size: 110%;
+    }
+    .slide_color3 h1{
+        font-size: 220%;
+        margin-left: 17%;
+    }
+    .slide_color3 h2{
+        font-size: 160%;
+        margin-top: 1rem;
+        margin-left: 17%;
+    }
+
+    .slide_color1 h1{
+        font-size: 220%;
+        margin-left: 17%;
+    }
+    .slide_color1 h2{
+        font-size: 160%;
+        margin-top: 1rem;
+        margin-left: 17%;
+    }
+
+    .btn-color1 a{
+        font-size: 120%;
+        border: 3px solid #f7f7f7;
+        border-radius: 10px;
+        background-color: #A56124;
+        font-family: 'Palette Mosaic', cursive;
+        height: 3rem;
+        color: #f7f7f7;
+        margin-left: 4rem;
+    } 
+}
 
 /* Responsiveness */
 @media (min-width: 900px) {
