@@ -12,7 +12,7 @@
 
 <header class="header">
     <!-- Logo -->
-    <a href="../HTML/index.html" class="logo" target="_self">Furry Park</a>
+    <a href="index.php" class="logo" target="_self">Furry Park</a>
     <!-- Hamburger icon -->
     <input class="side-menu" type="checkbox" id="side-menu"/>
     <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
@@ -52,7 +52,7 @@
                 
                     "<div class='chenar'>".
                         
-                        "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' target = '_self' >". 
+                        "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' >".
                              "<img src=" . $row['path'] . " class= 'pozeanimale'>".
                         "</a>". 
 

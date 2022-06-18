@@ -22,7 +22,7 @@
         <ul class="menu">
             <li><a href="../HTML/visit.html">Visit Us</a></li>
             <li><a href="../HTML/donate.html">Donate</a></li>
-            <li><a href="../HTML/animals.html">Animals</a></li>
+            <li><a href="animals.php">Animals</a></li>
         </ul>
     </nav>
 </header>
@@ -49,19 +49,19 @@
         </div>
     </div>
 
-
-    <div class="slide" id="slide3">
-        <div class="slide-div">
-            <div class="slide_color3" style="width: 50rem;">
+    <?php if (!isset($_COOKIE['user'])) echo "
+    <div class='slide' id='slide3'>
+        <div class='slide-div'>
+            <div class='slide_color3' style='width: 50rem;'>
                 <h1>Become a member of our zoo family</h1>
                 <h2>Register on our site so you don't miss anything new</h2>
-                <div class="btn-color3">
-                    <a href="../HTML/signup.html">Sign-Up</a>
+                <div class='btn-color3'>
+                    <a href='../HTML/signup.html'>Sign-Up</a>
                 </div>
             </div>
-            <img src="../Imagini/papag.png" style="width: 50%;" id="pasari" alt="#">
+            <img src='../Imagini/papag.png' style='width: 50%;' id='pasari' alt='#'>
         </div>
-    </div>
+    </div>"; ?>
 
     <div class="slide" id="slide1">
         <div class="slide-div">
@@ -83,7 +83,7 @@
 
 <div class="bar-2">
     <div class="infos">
-        <h2>Welcome to Furry Park</h2>
+        <h2>Welcome to Furry Park<?php if (isset($_COOKIE['user'])) echo ", " . $_COOKIE['user'] . " !"; ?></h2>
     </div>
 </div>
 
