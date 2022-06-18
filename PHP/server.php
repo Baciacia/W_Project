@@ -1,8 +1,5 @@
 <?php
-
-ini_set('display_errors', 1);
-error_reporting(-1);
-
+session_start();
 $username = "";
 $email = "";
 $errors = array();
@@ -79,7 +76,9 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
-            header('location: ../HTML/index.html');
+            setcookie("user", $username, time() + (600), '/');
+            $_COOKIE['user'] = $username;
+            header('location:index.php');
         } else {
             array_push($errors, "Wrong username/password combination");
         }
@@ -94,3 +93,4 @@ if (count($errors) > 0) : ?>
     <?php endforeach ?>
 
 <?php endif ?>
+
