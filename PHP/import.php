@@ -21,11 +21,12 @@ if ($ext == 'json') //json
         $lifespan = $data['lifespan'];
         $climate = $data['climate'];
         $description = $data['description'];
-
-        $query = "INSERT INTO animals (species, type, diet, lifespan, climate, description) VALUES('$species', '$type', '$diet', '$lifespan', '$climate', '$description')";
+        $path= $data ['path'];
+        $query = "INSERT INTO animals (species, type, diet, lifespan, climate, description, path) VALUES('$species', '$type', '$diet', '$lifespan', '$climate', '$description', '$path')";
         mysqli_query($db, $query);
+        header("location:animals.php");
 
-        echo $data['species'];
+        //echo $data['species'];
     } else echo "Species already exists";
 } else //xml
 {
@@ -41,10 +42,12 @@ if ($ext == 'json') //json
         $lifespan = $animalinfo->lifespan;
         $climate = $animalinfo->climate;
         $description = $animalinfo->description;
+        $path = $animalinfo->path;
 
-        $query = "INSERT INTO animals (species, type, diet, lifespan, climate, description) VALUES('$species', '$type', '$diet', '$lifespan', '$climate', '$description')";
+
+        $query = "INSERT INTO animals (species, type, diet, lifespan, climate, description,path) VALUES('$species', '$type', '$diet', '$lifespan', '$climate', '$description', '$path')";
         mysqli_query($db, $query);
-        echo $species;
+        header("location:animals.php");
     } else echo "Species already exists";
 
 }

@@ -36,35 +36,55 @@
     <h3>Come and visit various amazing animals from all over the world!</h3>
     <!--aici faci cu animalele din baza de date-->
 </div>
+<?php
+if (isset($_COOKIE['user'])){
+    $username=$_COOKIE['user'];
+    $db = mysqli_connect('localhost', 'root', '', 'accounts');
+    $query = "SELECT admin FROM users WHERE username='$username' ";
+    $result = $db->query($query);
+    $row = $result->fetch_assoc();
+    if ($row['admin']==1)
+        echo '
+<div>
+    <form action="import.php" method="get"
+          enctype="multipart/form-data">
+        <input type="file" id="myfile" accept=".xml, .json" name="myfile"/>
+        <br/><br/>
+
+        <input type="submit"/>
+    </form>
+</div>';
+}
+?>
 <div class="poze">
-    <?php 
+    <?php
 
-        echo "<style>";
-        include '../CSS/animals.css';
-        echo "</style>";
+    echo "<style>";
+    include '../CSS/animals.css';
+    echo "</style>";
 
-        $db = mysqli_connect('localhost', 'root', '', 'accounts');
-        $query = "SELECT * FROM animals ";
-        $result = $db->query($query);
+    $db = mysqli_connect('localhost', 'root', '', 'accounts');
+    $query = "SELECT * FROM animals ORDER BY species";
+    $result = $db->query($query);
+    $row = $result->fetch_assoc();
+    while ($row) {
+        echo
+
+            "<div class='chenar'>".
+
+            "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' >".
+            "<img src=" . $row['path'] . " class= 'pozeanimale'>".
+            "</a>".
+
+            "<div class = 'specie' >". $row["species"] . "<br>". "</div>".
+
+            "</div>";
+
+
         $row = $result->fetch_assoc();
-        while ($row) {
-            echo 
-                
-                    "<div class='chenar'>".
-                        
-                        "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' >".
-                             "<img src=" . $row['path'] . " class= 'pozeanimale'>".
-                        "</a>". 
-
-                        "<div class = 'specie' >". $row["species"] . "<br>". "</div>".
-
-                    "</div>";
-               
-           
-            $row = $result->fetch_assoc();
 
 
-        }
+    }
     ?>
 </div>
 </body>
