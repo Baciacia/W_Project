@@ -21,7 +21,7 @@
         <ul class="menu">
             <li><a href="../HTML/visit.html">Visit Us</a></li>
             <li><a href="../HTML/donate.html">Donate</a></li>
-            <li><a href="../HTML/animals.html">Animals</a></li>
+            <li><a href="../PHP/animals.php">Animals</a></li>
         </ul>
     </nav>
 </header>
@@ -36,19 +36,35 @@
     <h3>Come and visit various amazing animals from all over the world!</h3>
     <!--aici faci cu animalele din baza de date-->
 </div>
-<div>
-    <?php
-    $db = mysqli_connect('localhost', 'root', '', 'accounts');
-    $query = "SELECT * FROM animals ";
-    $result = $db->query($query);
-    $row = $result->fetch_assoc();
-    while ($row) {
-        echo $row["species"] . " " . $row['type'] . "<br> ";
-        echo "<img src=" . $row['path'] . ">";
+<div class="poze">
+    <?php 
+
+        echo "<style>";
+        include '../CSS/animals.css';
+        echo "</style>";
+
+        $db = mysqli_connect('localhost', 'root', '', 'accounts');
+        $query = "SELECT * FROM animals ";
+        $result = $db->query($query);
         $row = $result->fetch_assoc();
+        while ($row) {
+            echo 
+                
+                    "<div class='chenar'>".
+                        
+                        "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' target = '_self' >". 
+                             "<img src=" . $row['path'] . " class= 'pozeanimale'>".
+                        "</a>". 
+
+                        "<div class = 'specie' >". $row["species"] . "<br>". "</div>".
+
+                    "</div>";
+               
+           
+            $row = $result->fetch_assoc();
 
 
-    }
+        }
     ?>
 </div>
 </body>

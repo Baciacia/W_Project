@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/animals.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Animals</title>
+</head>
+<body>
+
+<header class="header">
+    <!-- Logo -->
+    <a href="../HTML/index.html" class="logo" target="_self">Furry Park</a>
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="../HTML/visit.html">Visit Us</a></li>
+            <li><a href="../HTML/donate.html">Donate</a></li>
+            <li><a href="../PHP/animals.php">Animals</a></li>
+        </ul>
+    </nav>
+</header>
+
+<script src="../JAVASCRIPT/api.js"></script>
+
+<div class="poze">
+    <?php 
+
+        $animal_id = $_GET['species'];
+
+        echo "<style>";
+        include '../CSS/an.temp.css';
+        echo "</style>";
+
+        $db = mysqli_connect('localhost', 'root', '', 'accounts');
+        $query = "SELECT * FROM animals WHERE species = '$animal_id' ";
+        $result = $db->query($query);
+        $row = $result->fetch_assoc();
+        while ($row) {
+            echo 
+                
+                    "<div class='chenar'>".
+                        
+                         "<img src=" . $row['path'] . " class= 'pozeanimale'>".  
+                        "<div class = 'bucati'>".
+                            "<div class = 'text'>". "<h2>Specie : </h2>". "</div>".
+                            "<div class = 'info_anim' >". $row["species"] . "<br>". "</div>".
+                        "</div>".
+
+                        "<div class = 'bucati'>".
+                            "<div class = 'text'>". "<h2>Type : </h2>". "</div>".
+                            "<div class = 'info_anim' >". $row["type"] . "<br>". "</div>".
+                        "</div>".
+
+                        "<div class = 'bucati'>".
+                            "<div class = 'text'>". "<h2>Diet : </h2>". "</div>".
+                            "<div class = 'info_anim' >". $row["diet"] . "<br>". "</div>".
+                        "</div>".
+
+                        "<div class = 'bucati'>".
+                            "<div class = 'text'>". "<h2>Lifespan : </h2>". "</div>".
+                            "<div class = 'info_anim' >". $row["lifespan"] . "<br>". "</div>".
+                        "</div>".
+
+                        "<div class = 'bucati2'>".
+                            "<div class = 'text'>". "<h2>Habitat : </h2>". "</div>".
+                            "<div class = 'info' >". $row["climate"] . "<br>". "</div>".
+                        "</div>".
+
+                        "<div class = 'bucati2'>".
+                            "<div class = 'text'>". "<h2>Infos : </h2>". "</div>".
+                            "<div class = 'info' >". $row["description"] . "<br>". "</div>".
+                        "</div>".
+
+                    "</div>";
+               
+           
+            $row = $result->fetch_assoc();
+
+
+        }
+    ?>
+</div>
+</body>
+</html>
