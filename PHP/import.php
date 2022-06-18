@@ -15,8 +15,7 @@ if ($ext == 'json') //json
     $animal_check_query = "SELECT species FROM animals WHERE species='$species' LIMIT 1";
     $result = mysqli_query($db, $animal_check_query);
     $animal = mysqli_fetch_assoc($result);
-    if (!$animal)
-    {
+    if (!$animal) {
         $type = $data['type'];
         $diet = $data['diet'];
         $lifespan = $data['lifespan'];

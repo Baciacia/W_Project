@@ -1,9 +1,10 @@
 <?php
 
-ini_set('display_errors', 1); error_reporting(-1);
+ini_set('display_errors', 1);
+error_reporting(-1);
 
 $username = "";
-$email    = "";
+$email = "";
 $errors = array();
 
 // conexiunea la baza de date
@@ -18,9 +19,15 @@ if (isset($_POST['reg_user'])) {
     $password_2 = mysqli_real_escape_string($db, $_POST['rpsw']);
 
     // verificam daca informatiile au fost introduse corect
-    if (empty($username)) { array_push($errors, "Username is required"); }
-    if (empty($email)) { array_push($errors, "Email is required"); }
-    if (empty($password_1)) { array_push($errors, "Password is required"); }
+    if (empty($username)) {
+        array_push($errors, "Username is required");
+    }
+    if (empty($email)) {
+        array_push($errors, "Email is required");
+    }
+    if (empty($password_1)) {
+        array_push($errors, "Password is required");
+    }
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
     }
@@ -73,17 +80,17 @@ if (isset($_POST['login_user'])) {
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "You are now logged in";
             header('location: ../HTML/index.html');
-        }else {
+        } else {
             array_push($errors, "Wrong username/password combination");
         }
     }
 }
 
 //afisam fiecare eroare daca exista
- if (count($errors) > 0) : ?>
+if (count($errors) > 0) : ?>
 
-     <?php foreach ($errors as $error) : ?>
-         <p><?php echo $error ?></p>
-     <?php endforeach ?>
+    <?php foreach ($errors as $error) : ?>
+        <p><?php echo $error ?></p>
+    <?php endforeach ?>
 
- <?php  endif?>
+<?php endif ?>

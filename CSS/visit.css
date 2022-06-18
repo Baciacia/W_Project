@@ -4,36 +4,37 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-.body{
+.body {
     height: auto;
     width: auto;
 }
 
 /* --------------------------------------------------bara de navigare----universal---------------------------------------*/
-.header{
-    background-color:#333;
+.header {
+    background-color: #333;
     position: relative;
     top: 0;
     width: 100%;
     height: 5.5rem;
 }
 
-.logo{
+.logo {
     display: inline-block;
-    color:rgb(218, 212, 212);
+    color: rgb(218, 212, 212);
     font-size: 45px;
     margin-left: 2rem;
 }
 
 /* Nav menu */
-.nav{
+.nav {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -41,27 +42,32 @@ ul{
     overflow: hidden;
     z-index: 99;
 }
-.menu a{
+
+.menu a {
     display: block;
     padding: 30px;
     color: rgb(218, 212, 212);
     font-size: 250%;
     margin-top: 5rem;
 }
-.menu a:hover{
+
+.menu a:hover {
     background-color: grey;
 }
-.nav{
+
+.nav {
     max-height: 0;
     transition: max-height .5s ease-out;
 }
 
 /* Menu Icon */
-.hamb{
+.hamb {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-}/* Style label tag */
+}
+
+/* Style label tag */
 
 .hamb-line {
     background: white;
@@ -70,10 +76,12 @@ ul{
     position: relative;
     width: 30px;
 
-} /* Style span tag */
+}
+
+/* Style span tag */
 
 .hamb-line::before,
-.hamb-line::after{
+.hamb-line::after {
     background: white;
     content: '';
     display: block;
@@ -82,32 +90,40 @@ ul{
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+
+.hamb-line::before {
     top: 5px;
 }
-.hamb-line::after{
+
+.hamb-line::after {
     top: -5px;
 }
 
 .side-menu {
     display: none;
-} /* Hide checkbox */
+}
+
+/* Hide checkbox */
 
 /* Toggle menu icon */
-.side-menu:checked ~ nav{
+.side-menu:checked ~ nav {
     max-height: 100%;
 }
+
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
 }
+
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
-    top:0;
+    top: 0;
 }
+
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
-    top:0;
+    top: 0;
 }
+
 /* aici fac meniul ala cu 3 linii ce arata ca un burger*/
 
 .meniu div {
@@ -117,7 +133,7 @@ ul{
     margin: 5px;
 }
 
-.body-v{
+.body-v {
     background-color: #9b59b6;
     display: flex;
     align-items: center;
@@ -127,7 +143,7 @@ ul{
 
 }
 
-.container-v{
+.container-v {
     background-color: #ffffff;
     border-radius: 5px;
     width: 38rem;
@@ -135,37 +151,37 @@ ul{
     box-shadow: 0 2px 5px #333;
     margin-top: 2rem;
     height: auto;
-    
+
 }
 
-.header-v{
+.header-v {
     background-color: #f7f7f7;
     border-bottom: 2px solid #f0f0f0;
     padding: 20px 40px;
 }
 
-.header-v h2{
+.header-v h2 {
     margin: 0;
     text-align: center;
 }
 
-.form-v{
+.form-v {
     padding: 30px 40px;
 }
 
-.form-control-v{
+.form-control-v {
     margin-bottom: 5px;
     padding-bottom: 20px;
     position: relative;
 }
 
-.form-control-v label{
+.form-control-v label {
     display: inline-block;
     margin-bottom: 5px;
     font-size: 120%;
 }
 
-.form-control-v input{
+.form-control-v input {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
@@ -174,7 +190,7 @@ ul{
     width: 100%;
 }
 
-.form-control-v select{
+.form-control-v select {
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     display: block;
@@ -183,7 +199,7 @@ ul{
     width: 100%;
 }
 
-#btn-submit{
+#btn-submit {
     background-color: #ad46d6;
     border: 2px solid #474448;
     border-radius: 10px;
@@ -194,7 +210,7 @@ ul{
     width: 100%;
 }
 
-.form-v button{
+.form-v button {
     background-color: #4684d6;
     border: 2px solid #474448;
     border-radius: 10px;
@@ -206,32 +222,32 @@ ul{
 }
 
 
-@media screen and (max-width:800px) {
-    .container-v{
+@media screen and (max-width: 800px) {
+    .container-v {
         width: 28rem;
         margin-bottom: 8rem;
     }
 
-    .body-v{
+    .body-v {
         height: 100%;
     }
 }
 
 
-@media screen and (max-width:600px){
-    .header a{
+@media screen and (max-width: 600px) {
+    .header a {
         font-size: 260%;
     }
 
-    .container-v{
+    .container-v {
         width: 21rem;
         margin-bottom: 8rem;
     }
-} 
+}
 
 
-@media screen and (max-width:421px){
-    .container-v{
+@media screen and (max-width: 421px) {
+    .container-v {
         width: 17rem;
         margin-bottom: 8rem;
     }
@@ -239,7 +255,7 @@ ul{
 
 /* Responsiveness */
 @media (min-width: 900px) {
-    .nav{
+    .nav {
         max-height: none;
         top: 0;
         position: sticky;
@@ -247,18 +263,21 @@ ul{
         width: fit-content;
     }
 
-    .menu li{
+    .menu li {
         float: left;
-        top:0;
+        top: 0;
     }
-    .menu a{
-        margin-top:  -1.2rem;
+
+    .menu a {
+        margin-top: -1.2rem;
     }
-    .menu a:hover{
+
+    .menu a:hover {
         background-color: transparent;
         color: grey;
     }
-    .hamb{
+
+    .hamb {
         display: none;
     }
 }

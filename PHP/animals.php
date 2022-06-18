@@ -9,44 +9,27 @@
     <title>Animals</title>
 </head>
 <body>
-<nav class="navbar">
-    <div class="logo">
-        <a href="index.html" target="_self">FURRY PARK</a>
-    </div>
-    <ul class="nav_list">
-        <li>
-            <a href="visit.html" target="_self">VISIT US</a>
-        </li>
-        <li>
-            <a href="animals.html" target="_self">ANIMALS</a>
-        </li>
-        <li>
-            <a href="donate.html" target="_self">DONATE</a>
-        </li>
-        <li>
-            <label></label>
-            <select name="lng" id="lng">
-                <option value="English">English</option>
-                <option value="Spanish">Spanish</option>
-                <option value="French">French</option>
-                <option value="Romanian">Romanian</option>
-            </select>
-        </li>
-    </ul>
 
+<header class="header">
+    <!-- Logo -->
+    <a href="../HTML/index.html" class="logo" target="_self">Furry Park</a>
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="../HTML/visit.html">Visit Us</a></li>
+            <li><a href="../HTML/donate.html">Donate</a></li>
+            <li><a href="../HTML/animals.html">Animals</a></li>
+        </ul>
+    </nav>
+</header>
 
-
-
-    <div class="meniu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-    </div>
-</nav>
 <script src="../JAVASCRIPT/api.js"></script>
 
 <div class="animals">
-    <img src="../Imagini/animals.jpg" id="#an" style="width: 100%;">
+    <img src="../Imagini/animals.jpg" id="#an" style="width: 100%;" alt="#">
 </div>
 
 <div class="info-bar" id="i-bar">
@@ -59,10 +42,9 @@
     $query = "SELECT * FROM animals ";
     $result = $db->query($query);
     $row = $result->fetch_assoc();
-    while($row)
-    {
-        echo $row["species"] ." ".$row['type']."<br> ";
-        echo "<img src=".$row['path'].">";
+    while ($row) {
+        echo $row["species"] . " " . $row['type'] . "<br> ";
+        echo "<img src=" . $row['path'] . ">";
         $row = $result->fetch_assoc();
 
 
@@ -71,5 +53,3 @@
 </div>
 </body>
 </html>
-
-

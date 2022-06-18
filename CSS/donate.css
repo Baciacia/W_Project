@@ -4,35 +4,36 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-.body{
+.body {
     height: auto;
 }
 
 /* --------------------------------------------------bara de navigare----universal---------------------------------------*/
-.header{
-    background-color:#333;
+.header {
+    background-color: #333;
     position: relative;
     top: 0;
     width: 100%;
     height: 5.5rem;
 }
 
-.logo{
+.logo {
     display: inline-block;
-    color:rgb(218, 212, 212);
+    color: rgb(218, 212, 212);
     font-size: 50px;
     margin-left: 2rem;
 }
 
 /* Nav menu */
-.nav{
+.nav {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -40,27 +41,32 @@ ul{
     overflow: hidden;
     z-index: 99;
 }
-.menu a{
+
+.menu a {
     display: block;
     padding: 30px;
     color: rgb(218, 212, 212);
     font-size: 250%;
     margin-top: 5rem;
 }
-.menu a:hover{
+
+.menu a:hover {
     background-color: grey;
 }
-.nav{
+
+.nav {
     max-height: 0;
     transition: max-height .5s ease-out;
 }
 
 /* Menu Icon */
-.hamb{
+.hamb {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-}/* Style label tag */
+}
+
+/* Style label tag */
 
 .hamb-line {
     background: white;
@@ -69,10 +75,12 @@ ul{
     position: relative;
     width: 30px;
 
-} /* Style span tag */
+}
+
+/* Style span tag */
 
 .hamb-line::before,
-.hamb-line::after{
+.hamb-line::after {
     background: white;
     content: '';
     display: block;
@@ -81,34 +89,41 @@ ul{
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+
+.hamb-line::before {
     top: 5px;
 }
-.hamb-line::after{
+
+.hamb-line::after {
     top: -5px;
 }
 
 .side-menu {
     display: none;
-} /* Hide checkbox */
+}
+
+/* Hide checkbox */
 
 /* Toggle menu icon */
-.side-menu:checked ~ nav{
+.side-menu:checked ~ nav {
     max-height: 100%;
 }
+
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
 }
+
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
-    top:0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
+    top: 0;
 }
 
-.body-d{
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.body-d {
     background-color: #ce99e3;
     display: flex;
     align-items: center;
@@ -116,27 +131,27 @@ ul{
     min-height: 62rem;
 }
 
-.container-d{
+.container-d {
     background-color: #ebebe0;
     border-radius: 5px;
     width: 38rem;
     max-width: 100%;
     box-shadow: 0 2px 5px #333;
     margin-top: 2rem;
-    
+
 }
 
-.container-d h2{
+.container-d h2 {
     color: #7ed321;
 }
 
-.header-d{
+.header-d {
     background-color: #ebebe0;
     border-bottom: 2px solid #f0f0f0;
     padding: 20px 40px;
 }
 
-.header-d h2{
+.header-d h2 {
     margin: 0;
     text-align: center;
     color: #7ed321;
@@ -147,7 +162,7 @@ ul{
 
 }
 
-.form-d{
+.form-d {
     padding: 30px 40px;
     position: relative;
 }
@@ -158,7 +173,7 @@ ul{
     margin-bottom: 2rem;
 }
 
-.account input[type="text"]{
+.account input[type="text"] {
     width: 12rem;
     height: 3rem;
     margin-left: 2.5rem;
@@ -167,7 +182,7 @@ ul{
     font-size: 120%;
 }
 
-.account input[type="email"]{
+.account input[type="email"] {
     width: 26.8rem;
     height: 3rem;
     margin-left: 2.5rem;
@@ -176,11 +191,11 @@ ul{
     font-size: 120%;
 }
 
-.cause{
-    position:relative;
+.cause {
+    position: relative;
 }
 
-.cause input{
+.cause input {
     width: 12rem;
     height: 3rem;
     margin-right: 2.5rem;
@@ -191,7 +206,7 @@ ul{
     font-size: 110%;
 }
 
-.cause select{
+.cause select {
     width: 12rem;
     height: 3rem;
     margin-bottom: 1rem;
@@ -200,20 +215,20 @@ ul{
     font-size: 110%;
 }
 
-.t-dob{
-    display:flex;
+.t-dob {
+    display: flex;
 }
 
-.t-dob h2{
+.t-dob h2 {
     margin-right: 9rem;
 }
 
-.form-dob{
+.form-dob {
     position: relative;
     display: flex;
 }
 
-.form-dob input[type="text"]{
+.form-dob input[type="text"] {
     width: 4rem;
     height: 3rem;
     font-size: 120%;
@@ -221,29 +236,31 @@ ul{
     text-align: center;
     margin-bottom: 1rem;
 }
-#finput{
+
+#finput {
     margin-left: 2.5rem;
 }
-.form-dob input[type="radio"]{
-   margin-left: 4rem;
-   margin-top: 2rem;
+
+.form-dob input[type="radio"] {
+    margin-left: 4rem;
+    margin-top: 2rem;
 }
 
-.form-dob label[for="var1"]{
+.form-dob label[for="var1"] {
     margin-left: 0.5rem;
     margin-top: 1.7rem;
 }
 
-.form-dob label[for="var2"]{
+.form-dob label[for="var2"] {
     margin-left: 0.5rem;
     margin-top: 1.7rem;
 }
 
-.details{
+.details {
     position: relative;
 }
 
-.details #cn{
+.details #cn {
     width: 27rem;
     height: 3rem;
     margin-top: 1rem;
@@ -252,7 +269,7 @@ ul{
     font-size: 110%;
 }
 
-.details #cvc{
+.details #cvc {
     width: 12rem;
     height: 3rem;
     margin-top: 1rem;
@@ -261,28 +278,28 @@ ul{
     font-size: 110%;
 }
 
-.details #mm{
+.details #mm {
     width: 3rem;
     height: 2rem;
     margin-top: 1rem;
     margin-left: 2rem;
 }
 
-.details #yyyy{
+.details #yyyy {
     width: 4rem;
     height: 2rem;
     margin-top: 1rem;
     margin-left: 2rem;
 }
 
-.form-d button{
+.form-d button {
     margin-top: 2rem;
     text-align: center;
     margin-left: 12rem;
-    width:7rem;
+    width: 7rem;
     height: 2rem;
     background-color: #7ed321;
-    color:#ffffff;
+    color: #ffffff;
     font-size: 120%;
 
 }
@@ -294,6 +311,7 @@ ul{
     body {
         overflow-x: hidden;
     }
+
     .nav_list {
         position: absolute;
         right: 0px;
@@ -309,31 +327,32 @@ ul{
         z-index: 2;
     }
 
-    img#primapasari{
+    img#primapasari {
         z-index: 1;
     }
 
     .nav_list li {
         opacity: 0;
     }
+
     .meniu {
         display: block;
     }
 
-    .footer{
+    .footer {
         height: 24rem;
     }
-    
+
 }
 
 
-@media screen and (max-width:800px) {
-    .container-d{
+@media screen and (max-width: 800px) {
+    .container-d {
         width: 28rem;
         margin-bottom: 10rem;
     }
 
-    .account input[type="email"]{
+    .account input[type="email"] {
         width: 20rem;
         height: 3rem;
         margin-left: 2.5rem;
@@ -342,7 +361,7 @@ ul{
         font-size: 140%;
     }
 
-    .cause select{
+    .cause select {
         width: 12rem;
         height: 3rem;
         margin-bottom: 1rem;
@@ -352,7 +371,7 @@ ul{
         margin-left: 2.5rem
     }
 
-    .details #cn{
+    .details #cn {
         width: 20rem;
         height: 3rem;
         margin-top: 1rem;
@@ -360,8 +379,8 @@ ul{
         margin-left: 2rem;
         font-size: 110%;
     }
-    
-    .details #cvc{
+
+    .details #cvc {
         width: 10rem;
         height: 3rem;
         margin-top: 1rem;
@@ -369,38 +388,38 @@ ul{
         text-align: center;
         font-size: 110%;
     }
-    
-    .details #mm{
+
+    .details #mm {
         width: 3rem;
         height: 2rem;
         margin-top: 1rem;
         margin-left: 1rem;
     }
-    
-    .details #yyyy{
+
+    .details #yyyy {
         width: 4rem;
         height: 2rem;
         margin-top: 1rem;
         margin-left: 1rem;
     }
 
-    .form-d button{
+    .form-d button {
         margin-top: 2rem;
         text-align: center;
         margin-left: 8rem;
-        width:7rem;
+        width: 7rem;
         height: 2rem;
         background-color: #7ed321;
-        color:#ffffff;
+        color: #ffffff;
         font-size: 120%;
     }
 
-    .t-dob h2{
+    .t-dob h2 {
         margin-right: 11rem;
         font-size: 140%;
     }
 
-    .form-dob input[type="text"]{
+    .form-dob input[type="text"] {
         width: 3rem;
         height: 3rem;
         font-size: 100%;
@@ -408,20 +427,20 @@ ul{
         text-align: center;
         margin-bottom: 1rem;
     }
-    
-    #finput{
+
+    #finput {
         margin-left: 2.5rem;
     }
 
 
 }
 
-@media screen and (max-width:600px){
-    .container-d{
+@media screen and (max-width: 600px) {
+    .container-d {
         width: 21rem;
     }
 
-    .account input[type="email"]{
+    .account input[type="email"] {
         width: 9rem;
         height: 2.5rem;
         margin-left: 2.5rem;
@@ -430,7 +449,7 @@ ul{
         font-size: 140%;
     }
 
-    .details #cn{
+    .details #cn {
         width: 9rem;
         height: 2.5rem;
         margin-top: 1rem;
@@ -439,7 +458,7 @@ ul{
         font-size: 110%;
     }
 
-    .details #cvc{
+    .details #cvc {
         width: 4rem;
         height: 2.5rem;
         margin-top: 1rem;
@@ -448,7 +467,7 @@ ul{
         font-size: 110%;
     }
 
-    .account input[type="text"]{
+    .account input[type="text"] {
         width: 9rem;
         height: 2.5rem;
         margin-left: 2.5rem;
@@ -457,7 +476,7 @@ ul{
         font-size: 120%;
     }
 
-    .cause input{
+    .cause input {
         width: 9rem;
         height: 3rem;
         margin-right: 2.5rem;
@@ -467,8 +486,8 @@ ul{
         text-align: center;
         font-size: 110%;
     }
-    
-    .cause select{
+
+    .cause select {
         width: 9rem;
         height: 2.5rem;
         margin-bottom: 1rem;
@@ -477,67 +496,68 @@ ul{
         font-size: 110%;
     }
 
-    .form-d button{
+    .form-d button {
         margin-top: 2rem;
         text-align: center;
         margin-left: 4.5rem;
-        width:7rem;
+        width: 7rem;
         height: 2rem;
         background-color: #7ed321;
-        color:#ffffff;
+        color: #ffffff;
         font-size: 120%;
-    
+
     }
-    .header a{
+
+    .header a {
         font-size: 250%;
     }
 
 }
 
-@media screen and (max-width:422px){
-    
-    .container-d{
+@media screen and (max-width: 422px) {
+
+    .container-d {
         width: 17rem;;
     }
 
-   
 
-    .account input[type="email"]{
+    .account input[type="email"] {
         margin-left: 1.5rem;
         font-size: 80%;
     }
 
-    .details #cn{
+    .details #cn {
         margin-left: 1.5rem;
         font-size: 80%;
     }
 
-    .details #cvc{   
+    .details #cvc {
         margin-left: 1.5rem;
     }
 
-    .account input[type="text"]{   
+    .account input[type="text"] {
         margin-left: 1.5rem;
     }
 
-    .form-d button{  
+    .form-d button {
         margin-left: 2.5rem;
-        font-size: 120%; 
+        font-size: 120%;
     }
 
-    .cause input{   
+    .cause input {
         margin-left: 1.5rem;
     }
-    
-    .cause select{
+
+    .cause select {
         margin-left: 1.5rem;
         font-size: 80%;
     }
 
-    .header a{
+    .header a {
         font-size: 260%;
     }
-    .details #cvc{
+
+    .details #cvc {
         width: 3rem;
         height: 2.5rem;
         margin-top: 1rem;
@@ -546,14 +566,14 @@ ul{
         font-size: 110%;
     }
 
-    .details #mm{
+    .details #mm {
         width: 3rem;
         height: 2rem;
         margin-top: 1rem;
         margin-left: 1.5rem;
     }
-    
-    .details #yyyy{
+
+    .details #yyyy {
         width: 4rem;
         height: 2rem;
         margin-top: 1rem;
@@ -564,7 +584,7 @@ ul{
 
 /* Responsiveness */
 @media (min-width: 900px) {
-    .nav{
+    .nav {
         max-height: none;
         top: 0;
         position: sticky;
@@ -572,18 +592,21 @@ ul{
         width: fit-content;
     }
 
-    .menu li{
+    .menu li {
         float: left;
-        top:0;
+        top: 0;
     }
-    .menu a{
-        margin-top:  -1.2rem;
+
+    .menu a {
+        margin-top: -1.2rem;
     }
-    .menu a:hover{
+
+    .menu a:hover {
         background-color: transparent;
         color: grey;
     }
-    .hamb{
+
+    .hamb {
         display: none;
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-$sname= "localhost";
+$sname = "localhost";
 
-$unmae= "root";
+$unmae = "root";
 
 $password = "";
 

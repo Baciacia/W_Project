@@ -4,35 +4,36 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-.body{
+.body {
     height: auto;
 }
 
 /* --------------------------------------------------bara de navigare----universal---------------------------------------*/
-.header{
-    background-color:#333;
+.header {
+    background-color: #333;
     position: relative;
     top: 0;
     width: 100%;
     height: 5.5rem;
 }
 
-.logo{
+.logo {
     display: inline-block;
-    color:rgb(218, 212, 212);
+    color: rgb(218, 212, 212);
     font-size: 50px;
     margin-left: 2rem;
 }
 
 /* Nav menu */
-.nav{
+.nav {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -40,27 +41,32 @@ ul{
     overflow: hidden;
     z-index: 99;
 }
-.menu a{
+
+.menu a {
     display: block;
     padding: 30px;
     color: rgb(218, 212, 212);
     font-size: 250%;
     margin-top: 5rem;
 }
-.menu a:hover{
+
+.menu a:hover {
     background-color: grey;
 }
-.nav{
+
+.nav {
     max-height: 0;
     transition: max-height .5s ease-out;
 }
 
 /* Menu Icon */
-.hamb{
+.hamb {
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-}/* Style label tag */
+}
+
+/* Style label tag */
 
 .hamb-line {
     background: white;
@@ -69,10 +75,12 @@ ul{
     position: relative;
     width: 30px;
 
-} /* Style span tag */
+}
+
+/* Style span tag */
 
 .hamb-line::before,
-.hamb-line::after{
+.hamb-line::after {
     background: white;
     content: '';
     display: block;
@@ -81,31 +89,38 @@ ul{
     transition: all .2s ease-out;
     width: 100%;
 }
-.hamb-line::before{
+
+.hamb-line::before {
     top: 5px;
 }
-.hamb-line::after{
+
+.hamb-line::after {
     top: -5px;
 }
 
 .side-menu {
     display: none;
-} /* Hide checkbox */
+}
+
+/* Hide checkbox */
 
 /* Toggle menu icon */
-.side-menu:checked ~ nav{
+.side-menu:checked ~ nav {
     max-height: 100%;
 }
+
 .side-menu:checked ~ .hamb .hamb-line {
     background: transparent;
 }
+
 .side-menu:checked ~ .hamb .hamb-line::before {
     transform: rotate(-45deg);
-    top:0;
+    top: 0;
 }
+
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
-    top:0;
+    top: 0;
 }
 
 /*---------------------------------------------------Imaginile principale----------------------------------------------------*/
@@ -116,84 +131,84 @@ img {
     vertical-align: middle;
     width: 30px;
     height: 570px;
-   z-index: 1;
+    z-index: 1;
 }
-  
 
-.container{
+
+.container {
     position: relative;
 }
 
-.slide{
+.slide {
     display: none;
 }
 
 
-.slide-divs{
+.slide-divs {
     display: flex;
 }
 
-.slide-div{
+.slide-div {
     display: flex;
 }
 
-.slide_color1{
+.slide_color1 {
     background-color: #2468a5;
 }
 
-.slide_color2{
+.slide_color2 {
     background-color: #65a051;
     text-align: left;
 }
 
-.slide_color3{
-    background-color:#e57b2c ; 
+.slide_color3 {
+    background-color: #e57b2c;
 }
 
 
 /* Next si prev -- butoanele */
 .prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 26px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 40px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 26px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-
-  /* cand dai cu mouseul peste adaugam o culoare de background sa se vada frumos*/
-.prev:hover,
-.next:hover {
-  background-color: rgba(46, 44, 44, 0.8);
 }
 
-  #first-img{
-      display: block;
-  }
+/* cand dai cu mouseul peste adaugam o culoare de background sa se vada frumos*/
+.prev:hover,
+.next:hover {
+    background-color: rgba(46, 44, 44, 0.8);
+}
 
-  .demo {
+#first-img {
+    display: block;
+}
+
+.demo {
     opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
+}
 
-  .slide_color1 h1{
-    color:#f7f7f7;
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+.slide_color1 h1 {
+    color: #f7f7f7;
     font-size: 370%;
     margin-left: 6rem;
     margin-top: 4rem;
@@ -202,16 +217,16 @@ img {
 
 }
 
-.slide_color1 h2{
-    color:#f7f7f7;
+.slide_color1 h2 {
+    color: #f7f7f7;
     font-size: 180%;
     margin-left: 6rem;
     font-family: 'Palette Mosaic', cursive;
     margin-bottom: 4rem;
 }
 
-.slide_color2 h1{
-    color:#333;
+.slide_color2 h1 {
+    color: #333;
     font-size: 800%;
     margin-left: 6rem;
     margin-top: 4rem;
@@ -219,8 +234,8 @@ img {
 
 }
 
-.slide_color3 h1{
-    color:#333;
+.slide_color3 h1 {
+    color: #333;
     font-size: 400%;
     margin-left: 6rem;
     margin-top: 4rem;
@@ -228,8 +243,8 @@ img {
 
 }
 
-.slide_color3 h2{
-    color:#333;
+.slide_color3 h2 {
+    color: #333;
     font-size: 200%;
     margin-left: 6rem;
     margin-top: 4rem;
@@ -238,19 +253,19 @@ img {
 
 }
 
-.slide_color2 h2{
-    color:#333;
+.slide_color2 h2 {
+    color: #333;
     font-size: 300%;
     margin-left: 6rem;
     font-family: 'Palette Mosaic', cursive;
     margin-bottom: 4rem;
 }
 
-.btn-color{
+.btn-color {
     margin-top: 4rem;
 }
 
-.btn-color1 a{
+.btn-color1 a {
     text-decoration: none;
     font-size: 160%;
     border: 3px solid #f7f7f7;
@@ -262,7 +277,7 @@ img {
     color: #f7f7f7;
 }
 
-.btn-color2 a{
+.btn-color2 a {
     text-decoration: none;
     font-size: 160%;
     border: 3px solid #f7f7f7;
@@ -275,7 +290,7 @@ img {
 
 }
 
-.btn-color3 a{
+.btn-color3 a {
     text-decoration: none;
     font-size: 160%;
     border: 3px solid #333;
@@ -286,10 +301,10 @@ img {
     font-family: 'Palette Mosaic', cursive;
     height: 3rem;
     color: #f7f7f7;
-    
+
 }
 
-.btn-color a:hover{
+.btn-color a:hover {
     background-color: #ca7f46;
 }
 
@@ -297,7 +312,7 @@ img {
 
 /* -------------------------------------------------------Bara cu informatii----------------------------------------------------*/
 
-.bar-2{
+.bar-2 {
     display: flex;
     height: 6rem;
     width: auto;
@@ -305,7 +320,7 @@ img {
     margin-top: 0;
 }
 
-.infos{
+.infos {
     display: flex;
     font-size: 170%;
     margin-left: 33rem;
@@ -318,32 +333,32 @@ img {
 
 
 /*--------------------------------------------------------------Footer----------------------------------------------------------*/
-.sign-up{
+.sign-up {
     margin-top: 4rem;
     font-size: 110%;
-    
+
 }
 
-.footer{
+.footer {
     height: auto;
     background-color: #333;
 }
 
 
-.signmsg h2{
+.signmsg h2 {
     color: #e57b2c;
     font-size: 330%;
     margin-left: 12rem;
 }
 
-.signmsg h4{
+.signmsg h4 {
     color: #ffffff;
     font-size: 130%;
     margin-left: 12rem;
     margin-top: 2rem;
 }
 
-.signup{
+.signup {
     height: 2.5rem;
     width: 6rem;
     border-color: #333;
@@ -355,13 +370,14 @@ img {
 }
 
 
-.signup a{
+.signup a {
     font-size: 160%;
     text-decoration: none;
     text-align: center;
-    color:#ffffff
+    color: #ffffff
 }
- /*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
 
 
 /* pentru caruselul de imagini; il fac responsive   si pentru bara a doua unde avem mesajul de salut*/
@@ -374,61 +390,68 @@ de reservare, donare, si inregistrare*/
     .nav_list {
         width: 73%;
     }
-    .infos{
+
+    .infos {
         margin-left: 34%;
         font-size: 140%;
     }
 
-    img#cangur{
+    img#cangur {
         height: auto;
     }
 
-    img#tigru{
+    img#tigru {
         height: auto;
     }
 
-    img#pasari{
+    img#pasari {
         height: auto;
     }
 
-    img#primapasari{
+    img#primapasari {
         height: 30rem;
     }
 
-    .slide_color2 h2{
+    .slide_color2 h2 {
         font-size: 230%;
     }
-    .slide_color2 h1{
+
+    .slide_color2 h1 {
         font-size: 415%;
     }
 
-    .slide_color1 h2{
+    .slide_color1 h2 {
         font-size: 145%;
     }
-    .slide_color1 h1{
+
+    .slide_color1 h1 {
         font-size: 285%;
     }
 
-    .slide_color3 h2{
+    .slide_color3 h2 {
         font-size: 145%;
     }
-    .slide_color3 h1{
+
+    .slide_color3 h1 {
         font-size: 245%;
     }
-    .slide-div{
+
+    .slide-div {
         height: 30rem;
     }
 
-    .footer{
+    .footer {
         height: 13rem;
     }
 
-    .signmsg h2{
-        margin-left:11%
+    .signmsg h2 {
+        margin-left: 11%
     }
-    .signmsg h4{
+
+    .signmsg h4 {
         margin-left: 11%;
     }
+
     .signup {
         margin-left: 11%;
     }
@@ -436,39 +459,40 @@ de reservare, donare, si inregistrare*/
 }
 
 
- /* pentru bara de navigare  */
+/* pentru bara de navigare  */
 
 @media screen and (max-width: 900px) {
 
     .nav_list li {
         opacity: 0;
     }
+
     .meniu {
         display: block;
     }
 
-    .infos h2{
+    .infos h2 {
         margin-left: auto;
         margin-right: auto;
         font-size: 150%;
     }
 
-    .signmsg h2{
+    .signmsg h2 {
         color: #e57b2c;
         font-size: 250%;
         margin-left: 20%;
-        
+
     }
-    
-    .signmsg h4{
+
+    .signmsg h4 {
         color: #ffffff;
         font-size: 120%;
         margin-left: 15%;
         margin-top: 2rem;
-     
+
     }
 
-    .signup{
+    .signup {
         height: 2.5rem;
         width: 6rem;
         border-color: #333;
@@ -482,212 +506,222 @@ de reservare, donare, si inregistrare*/
 }
 
 
+@media screen and (max-width: 800px) {
 
-@media screen and (max-width: 800px){
-
-    #slide1{
+    #slide1 {
         height: 31rem;
         background-color: #2468a5;
     }
 
-    #slide2{
+    #slide2 {
         height: 31rem;
         background-color: #65a051;
     }
 
-    #slide3{
+    #slide3 {
         height: 31rem;
         background-color: #e57b2c;
     }
 
-    img#primapasari{
+    img#primapasari {
         height: 31rem;
     }
 
-    img#pasari{
+    img#pasari {
         display: none;
     }
 
-    img#tigru{
+    img#tigru {
         display: none;
     }
 
-    img#cangur{
+    img#cangur {
         display: none;
     }
-    .slide_color2 h2{
+
+    .slide_color2 h2 {
         font-size: 230%;
     }
-    .slide_color2 h1{
+
+    .slide_color2 h1 {
         font-size: 465%;
     }
 
-    .slide_color1 h2{
+    .slide_color1 h2 {
         font-size: 155%;
     }
-    .slide_color1 h1{
+
+    .slide_color1 h1 {
         font-size: 285%;
     }
 
-    .slide_color3 h2{
+    .slide_color3 h2 {
         font-size: 155%;
     }
-    .slide_color3 h1{
+
+    .slide_color3 h1 {
         font-size: 285%;
     }
 
-    .bar-2{
+    .bar-2 {
         width: 100%;
     }
 
-    .infos{
+    .infos {
         margin-left: 4rem;
         font-size: 140%;
     }
 
-    .footer{
+    .footer {
         height: 15rem;
     }
 
-    .signmsg h2{
-        font-size:220%;
+    .signmsg h2 {
+        font-size: 220%;
         margin-left: 8rem;
-        
+
     }
 
-    .signmsg h4{
+    .signmsg h4 {
         font-size: 110%;
         margin-left: 6rem;
-       
+
     }
 
-    .infos h2{
+    .infos h2 {
         margin-left: 8rem;
         font-size: 130%;
     }
 
-    .signup{
+    .signup {
         height: 2rem;
         width: 5rem;
         border-color: #333;
         background-color: #e57b2c;
         border: 3px solid #f7f7f7;
         margin-left: 15%;
-        
+
         margin-top: 2rem;
         border-radius: 10px;
     }
-    .signup a{
+
+    .signup a {
         font-size: 125%;
     }
 
 }
 
-@media screen and (max-width: 635px)
-{
-    .signmsg h2{
+@media screen and (max-width: 635px) {
+    .signmsg h2 {
         color: #e57b2c;
         font-size: 190%;
         margin-left: 17%;
-        
+
     }
-    
-    .signmsg h4{
+
+    .signmsg h4 {
         color: #ffffff;
         font-size: 110%;
         margin-left: 15%;
         margin-top: 2rem;
-        
+
     }
-    .infos h2{
+
+    .infos h2 {
         margin-left: 5rem;
-        
+
         font-size: 120%;
     }
-    .header a{
+
+    .header a {
         font-size: 270%;
     }
 }
 
 
-@media screen and (max-width: 510px)
-{
-    .infos h2{
+@media screen and (max-width: 510px) {
+    .infos h2 {
         margin-left: 3rem;
         font-size: 110%;
     }
 
-    .signmsg h2{
+    .signmsg h2 {
         color: #e57b2c;
         font-size: 170%;
         margin-left: 13%;
-        
+
     }
-    
-    .signmsg h4{
+
+    .signmsg h4 {
         color: #ffffff;
         font-size: 110%;
         margin-left: 13%;
         margin-top: 2rem;
-        
+
     }
-    .header a{
+
+    .header a {
         font-size: 250%;
     }
 
-    .slide_color2 h1{
+    .slide_color2 h1 {
         font-size: 300%;
         margin-left: 17%;
     }
-    .slide_color2 h2{
+
+    .slide_color2 h2 {
         font-size: 200%;
         margin-top: 1rem;
         margin-left: 17%;
     }
-    .btn-color2 a{
+
+    .btn-color2 a {
         font-size: 150%;
         margin-left: 25%;
 
-    } 
+    }
 
-    .slide_color3 h1{
+    .slide_color3 h1 {
         font-size: 270%;
         margin-left: 17%;
     }
-    .slide_color3 h2{
+
+    .slide_color3 h2 {
         font-size: 160%;
         margin-top: 1rem;
         margin-left: 17%;
     }
 }
 
-@media screen and (max-width: 420px)
-{
-    .infos h2{
+@media screen and (max-width: 420px) {
+    .infos h2 {
         margin-left: 1rem;
         font-size: 110%;
     }
-    .slide_color3 h1{
+
+    .slide_color3 h1 {
         font-size: 220%;
         margin-left: 17%;
     }
-    .slide_color3 h2{
+
+    .slide_color3 h2 {
         font-size: 160%;
         margin-top: 1rem;
         margin-left: 17%;
     }
 
-    .slide_color1 h1{
+    .slide_color1 h1 {
         font-size: 220%;
         margin-left: 17%;
     }
-    .slide_color1 h2{
+
+    .slide_color1 h2 {
         font-size: 160%;
         margin-top: 1rem;
         margin-left: 17%;
     }
 
-    .btn-color1 a{
+    .btn-color1 a {
         font-size: 120%;
         border: 3px solid #f7f7f7;
         border-radius: 10px;
@@ -696,12 +730,12 @@ de reservare, donare, si inregistrare*/
         height: 3rem;
         color: #f7f7f7;
         margin-left: 4rem;
-    } 
+    }
 }
 
 /* Responsiveness */
 @media (min-width: 900px) {
-    .nav{
+    .nav {
         max-height: none;
         top: 0;
         position: sticky;
@@ -709,18 +743,21 @@ de reservare, donare, si inregistrare*/
         width: fit-content;
     }
 
-    .menu li{
+    .menu li {
         float: left;
-        top:0;
+        top: 0;
     }
-    .menu a{
-        margin-top:  -1.2rem;
+
+    .menu a {
+        margin-top: -1.2rem;
     }
-    .menu a:hover{
+
+    .menu a:hover {
         background-color: transparent;
         color: grey;
     }
-    .hamb{
+
+    .hamb {
         display: none;
     }
 }

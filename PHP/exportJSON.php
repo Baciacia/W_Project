@@ -8,6 +8,6 @@ $animal = mysqli_fetch_assoc($result);
 
 $a = '../XML_JSON/' . $animal['species'] . 'Exp.json';
 
-file_put_contents($a, json_encode($animal,JSON_PRETTY_PRINT));
+file_put_contents($a, json_encode($animal, JSON_PRETTY_PRINT));
 
 //nu uita sa stergi path ul la sfarsit

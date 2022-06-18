@@ -10,75 +10,75 @@
 </head>
 <body>
 
-    <header class="header">
-        <!-- Logo -->
-        <a href="index.html" class="logo" target="_self">Furry Park</a>
-        <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <!-- Menu -->
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="visit.html">Visit Us</a></li>
-                <li><a href="donate.html">Donate</a> </li>
-                <li><a href="animals.html">Animals</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="header">
+    <!-- Logo -->
+    <a href="index.html" class="logo" target="_self">Furry Park</a>
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu"/>
+    <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+    <!-- Menu -->
+    <nav class="nav">
+        <ul class="menu">
+            <li><a href="visit.html">Visit Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="animals.html">Animals</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <script src="/JAVASCRIPT/api.js"></script>
+<script src="/JAVASCRIPT/api.js"></script>
 
-    <div class="body-v">
-        <div class="container-v">
-            <div class="header-v">
-                <h2>Create a reservation</h2>
+<div class="body-v">
+    <div class="container-v">
+        <div class="header-v">
+            <h2>Create a reservation</h2>
+        </div>
+
+        <form class="form-v" id="form-v">
+            <div class="form-control-v">
+                <label>Name</label>
+                <input type="text" placeholder="Name" id="username">
             </div>
 
-            <form class="form-v" id="form-v">
-                <div class="form-control-v">
-                    <label>Name</label>
-                    <input type="text" placeholder="Name" id="username">
-                </div>
+            <div class="form-control-v">
+                <label>Email</label>
+                <input type="email" placeholder="email" id="email">
+            </div>
 
-                <div class="form-control-v">
-                    <label>Email</label>
-                    <input type="email" placeholder="email" id="email">
-                </div>
+            <div class="form-control-v">
+                <label>Telephone Number</label>
+                <input type="text" placeholder="07.." id="number">
+            </div>
 
-                <div class="form-control-v">
-                    <label>Telephone Number</label>
-                    <input type="text" placeholder="07.." id="number">
-                </div>
+            <div class="form-control-v">
+                <label>The number of people</label>
+                <input type="number" placeholder="Max 40" id="persons">
+            </div>
 
-                <div class="form-control-v">
-                    <label>The number of people</label>
-                    <input type="number" placeholder="Max 40" id="persons">
-                </div>
+            <div class="form-control-v">
+                <label>Date</label>
+                <input type="date" id="data">
+            </div>
 
-                <div class="form-control-v">
-                    <label>Date</label>
-                    <input type="date" id="data">
-                </div>
-                
-                <div class="form-control-v">
-                    <label>Choose an hour:</label>
-                    <select name="hour" id="hour">
-                        <option value="fh">7:30am - 9:00am</option>
-                        <option value="sh">9:00am - 10:30am</option>
-                        <option value="th">10:30am - 12:00am</option>
-                        <option value="fth">12:00am - 1:30pm</option>
-                        <option value="fvh">1:30pm - 3:00pm</option>
-                        <option value="sxh">3:00pm - 4:30pm</option>
-                        <option value="svh">4:30pm - 6:00pm</option>
-                        <option value="sxh">6:00pm - 7:30pm</option>     
-                      </select>
-                </div>
+            <div class="form-control-v">
+                <label>Choose an hour:</label>
+                <select name="hour" id="hour">
+                    <option value="fh">7:30am - 9:00am</option>
+                    <option value="sh">9:00am - 10:30am</option>
+                    <option value="th">10:30am - 12:00am</option>
+                    <option value="fth">12:00am - 1:30pm</option>
+                    <option value="fvh">1:30pm - 3:00pm</option>
+                    <option value="sxh">3:00pm - 4:30pm</option>
+                    <option value="svh">4:30pm - 6:00pm</option>
+                    <option value="sxh">6:00pm - 7:30pm</option>
+                </select>
+            </div>
 
-                <button id="btn-submit">Submit</button>
+            <button id="btn-submit">Submit</button>
 
-            </form>
-        </div>
+        </form>
     </div>
+</div>
 
 </body>
 </html>
