@@ -45,70 +45,80 @@ if (isset($_COOKIE['user'])) {
     $row = $result->fetch_assoc();
     if ($row['admin'] == 1)
         echo '
-<div class="import">
-    <form action="import.php" method="get"
-          enctype="multipart/form-data">
-        <input class = "file" type="file" id="myfile" accept=".xml, .json" name="myfile"/>
-        <br/><br/>
+    <div class="import">
+        <h2>Import:</h2>
+        <form action="import.php" method="get"
+            enctype="multipart/form-data">
+            <input class = "file" type="file" id="myfile" accept=".xml, .json" name="myfile"/>
+            <br/><br/>
 
-        <input class="button" type="submit"/>
-    </form>
-</div>';
+            <input class="button" type="submit"/>
+        </form>
+    </div>';
 }
 ?>
 
-<form action="" method="post">
-    <select name="Diet">
-        <option value="" >Diet</option>
-        <?php
-        $db = mysqli_connect('localhost', 'root', '', 'accounts');
-        $query = "SELECT DISTINCT diet_filter FROM animals ";
-        $result = $db->query($query);
-        $row = $result->fetch_assoc();
-        while ($row) {
-            echo "<option value=" . $row['diet_filter'] . ">" . $row['diet_filter'] . "</option>";
-            $row = $result->fetch_assoc();
-        }
+<form action="" method="post" class="form_animale">
+    <div class="pachet0">
+        <div class="pachet1">
+            <select name="Diet" class="select_animale">
+                <option value="" >Diet</option>
+                <?php
+                $db = mysqli_connect('localhost', 'root', '', 'accounts');
+                $query = "SELECT DISTINCT diet_filter FROM animals ";
+                $result = $db->query($query);
+                $row = $result->fetch_assoc();
+                while ($row) {
+                    echo "<option value=" . $row['diet_filter'] . ">" . $row['diet_filter'] . "</option>";
+                    $row = $result->fetch_assoc();
+                }
 
 
-        ?>
-    </select>
-    <select name="Habitat">
-        <option value="" >Habitat</option>
-        <?php
-        $db = mysqli_connect('localhost', 'root', '', 'accounts');
-        $query = "SELECT DISTINCT habitat_filter FROM animals ";
-        $result = $db->query($query);
-        $row = $result->fetch_assoc();
-        while ($row) {
-            echo "<option value=" . $row['habitat_filter'] . ">" . $row['habitat_filter'] . "</option>";
-            $row = $result->fetch_assoc();
-        }
+                ?>
+            </select>
 
+            <select name="Habitat" class="select_animale">
+                <option value="" >Habitat</option>
+                <?php
+                $db = mysqli_connect('localhost', 'root', '', 'accounts');
+                $query = "SELECT DISTINCT habitat_filter FROM animals ";
+                $result = $db->query($query);
+                $row = $result->fetch_assoc();
+                while ($row) {
+                    echo "<option value=" . $row['habitat_filter'] . ">" . $row['habitat_filter'] . "</option>";
+                    $row = $result->fetch_assoc();
+                }
 
-        ?>
-    </select>
-    <select name="Type">
-        <option value="" >Type</option>
-        <?php
-        $db = mysqli_connect('localhost', 'root', '', 'accounts');
-        $query = "SELECT DISTINCT type FROM animals ";
-        $result = $db->query($query);
-        $row = $result->fetch_assoc();
-        while ($row) {
-            echo "<option value=" . $row['type'] . ">" . $row['type'] . "</option>";
-            $row = $result->fetch_assoc();
-        }
+                ?>
+            </select>
+        </div>
 
+        <div class="pachet2">
+            <select name="Type" class="select_animale">
+                <option value="" >Type</option>
+                <?php
+                $db = mysqli_connect('localhost', 'root', '', 'accounts');
+                $query = "SELECT DISTINCT type FROM animals ";
+                $result = $db->query($query);
+                $row = $result->fetch_assoc();
+                while ($row) {
+                    echo "<option value=" . $row['type'] . ">" . $row['type'] . "</option>";
+                    $row = $result->fetch_assoc();
+                }
+                ?>
+            </select>
 
-        ?>
-    </select>
-    <select name="Endangered">
-        <option value="" >Endangerment</option>
-        <option value="Endangered"> Endangered</option>
-        <option value="Stable"> Stable</option>
-    </select>
-    <input type="submit" name="submit" value="Filter">
+            <select name="Endangered" class="select_animale">
+                <option value="" >Endangerment</option>
+                <option value="Endangered"> Endangered</option>
+                <option value="Stable"> Stable</option>
+            </select>
+
+        </div>
+    </div>
+
+    <input type="submit" name="submit" value="Filter" class="button_animale">
+
 </form>
 
 <?php
