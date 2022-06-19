@@ -213,6 +213,7 @@ ul {
     background-color: #e5ab0b;
 }
 
+
 .select_animale{
     margin-left: auto;
     margin-right: auto;
@@ -253,10 +254,11 @@ ul {
 /*LA PHP ACUM*/
 
 .pozeanimale {
-    width: 60%;
     border-radius: 25px;
     margin-left: 20%;
     margin-top: 3rem;
+    display: block;
+    width: 70%;
 }
 
 .chenar {
