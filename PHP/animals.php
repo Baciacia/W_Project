@@ -56,7 +56,6 @@ if (isset($_COOKIE['user'])){
 </div>';
 }
 ?>
-<div class="poze">
     <?php
 
     echo "<style>";
@@ -67,7 +66,11 @@ if (isset($_COOKIE['user'])){
     $query = "SELECT * FROM animals ORDER BY species";
     $result = $db->query($query);
     $row = $result->fetch_assoc();
+    $nr=0;
     while ($row) {
+        $nr++;
+        if($nr%2==1)
+            echo "<div class='poze'>";
         echo
 
             "<div class='chenar'>".
@@ -82,10 +85,11 @@ if (isset($_COOKIE['user'])){
 
 
         $row = $result->fetch_assoc();
+        if($nr%2==0 || !$row)
+            echo "</div>";
 
 
     }
     ?>
-</div>
 </body>
 </html>

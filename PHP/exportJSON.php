@@ -3,7 +3,8 @@
 $db = mysqli_connect('localhost', 'root', '', 'accounts');
 $animal_species = $_GET['species'];
 echo $animal_species;
-$user_check_query = "SELECT species,type,diet,lifespan,climate,description,path FROM animals where species='$animal_species'";
+$user_check_query = "SELECT species ,scientific, type, lifespan, description, habitat, diet, diet_filter,
+                     habitat_filter,endangered, path FROM animals where species='$animal_species'";
 $result = mysqli_query($db, $user_check_query);
 $animal = mysqli_fetch_assoc($result);
 echo "da";

@@ -45,50 +45,65 @@
         echo
 
             "<div class='chenar'>" .
+            "<img src=" . $row['path'] . " class= 'pozeanimale'>";
 
-            "<img src=" . $row['path'] . " class= 'pozeanimale'>" .
-            "<div class = 'bucati'>" .
-                "<div class = 'text'>" . "<h2>Species : </h2>" . "</div>" .
-                "<div class = 'info_anim' >" . $row["species"] . "<br>" . "</div>" .
+        if ($row['endangered'] == 1)
+            echo "<div class = 'bucati'>
+                 <div class = 'text'>" . "<h2>Endangered : </h2>" . "</div>" .
+                "<div class = 'info_anim' > Yes <br>" . "</div>" .
+                "</div>";
+        else echo "<div class = 'bucati'>
+                <div class = 'text'>" . "<h2>Endangered : </h2>" . "</div>" .
+            "<div class = 'info_anim' > No <br>" . "</div>" .
+            "</div>";
+        echo "<div class = 'bucati'>" .
+
+            "<div class = 'text'>" . "<h2>Species : </h2>" . "</div>" .
+            "<div class = 'info_anim' >" . $row["species"] . "<br>" . "</div>" .
             "</div>" .
 
             "<div class = 'bucati'>" .
-                "<div class = 'text'>" . "<h2>Scientific name : </h2>" . "</div>" .
-                "<div class = 'info_anim' >" . $row["scientific"] . "<br>" . "</div>" .
+            "<div class = 'text'>" . "<h2>Scientific name : </h2>" . "</div>" .
+            "<div class = 'info_anim' >" . $row["scientific"] . "<br>" . "</div>" .
             "</div>" .
 
 
             "<div class = 'bucati'>" .
-                "<div class = 'text'>" . "<h2>Type : </h2>" . "</div>" .
-                "<div class = 'info_anim' >" . $row["type"] . "<br>" . "</div>" .
+            "<div class = 'text'>" . "<h2>Type : </h2>" . "</div>" .
+            "<div class = 'info_anim' >" . $row["type"] . "<br>" . "</div>" .
             "</div>" .
 
             "<div class = 'bucati'>" .
-                "<div class = 'text'>" . "<h2>Lifespan : </h2>" . "</div>" .
-                "<div class = 'info_anim' >" . $row["lifespan"] . "<br>" . "</div>" .
+            "<div class = 'text'>" . "<h2>Lifespan : </h2>" . "</div>" .
+            "<div class = 'info_anim' >" . $row["lifespan"] . "<br>" . "</div>" .
             "</div>" .
 
             "<div class = 'bucati2'>" .
-                "<div class = 'text'>" . "<h2>Infos : </h2>" . "</div>" .
-                "<div class = 'info' >" . $row["description"] . "<br>" . "</div>" .
+            "<div class = 'text'>" . "<h2>Infos : </h2>" . "</div>" .
+            "<div class = 'info' >" . $row["description"] . "<br>" . "</div>" .
             "</div>" .
 
             "<div class = 'bucati2'>" .
-                "<div class = 'text'>" . "<h2>Habitat : </h2>" . "</div>" .
-                "<div class = 'info' >" . $row["habitat"] . "<br>" . "</div>" .
+            "<div class = 'text'>" . "<h2>Habitat : </h2>" . "</div>" .
+            "<div class = 'info' >" . $row["habitat"] . "<br>" . "</div>" .
             "</div>" .
 
             "<div class = 'bucati2'>" .
+<<<<<<< Updated upstream
                 "<div class = 'text'>" . "<h2>Diet : </h2>" . "</div>" .
                 "<div class = 'info_anim' >" . $row["diet"] . "<br>" . "</div>" .
+=======
+            "<div class = 'text'>" . "<h2>Diet : </h2>" . "</div>" .
+            "<div class = 'info_anim' >" . $row["diet"] . "<br>" . "</div>" .
+>>>>>>> Stashed changes
             "</div>" .
 
             "<div class = 'button'>" .
-                "<a href ='exportJSON.php?species=".$row["species"]."' target = '_self' >" . "Export JSON" . "</a>" .
+            "<a href ='exportJSON.php?species=" . $row["species"] . "' target = '_self' >" . "Export JSON" . "</a>" .
             "</div>" .
 
             "<div class = 'button'>" .
-                "<a href ='exportXML.php?species=".$row["species"]."' >" . "Export XML" . "</a>" .
+            "<a href ='exportXML.php?species=" . $row["species"] . "' >" . "Export XML" . "</a>" .
             "</div>" .
 
             "</div>";

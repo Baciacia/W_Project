@@ -10,11 +10,15 @@ $animal = mysqli_fetch_assoc($result);
 $xml = '<?xml version="1.0"?> 
 <animal>
 <species>' . $animal['species'] . '</species>
+<scientific>' . $animal['scientific'] . '</scientific>
 <type>' . $animal['type'] . '</type>
-<diet>' . $animal['diet'] . '</diet>
 <lifespan>' . $animal['lifespan'] . '</lifespan>
-<climate>' . $animal['climate'] . '</climate>
 <description>' . $animal['description'] . '</description>
+<habitat>' . $animal['habitat'] . '</habitat>
+<diet>' . $animal['diet'] . '</diet>
+<diet_filter>' . $animal['diet_filter'] . '</diet_filter>
+<habitat_filter>' . $animal['habitat_filter'] . '</habitat_filter>
+<endangered>' . $animal['endangered'] . '</endangered>
 <path>' . $animal['path'] . '</path>
 </animal>';
 

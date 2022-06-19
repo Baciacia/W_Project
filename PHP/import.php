@@ -16,13 +16,22 @@ if ($ext == 'json') //json
     $result = mysqli_query($db, $animal_check_query);
     $animal = mysqli_fetch_assoc($result);
     if (!$animal) {
+        $scientific = $data['scientific'];
         $type = $data['type'];
-        $diet = $data['diet'];
         $lifespan = $data['lifespan'];
-        $climate = $data['climate'];
         $description = $data['description'];
-        $path= $data ['path'];
-        $query = "INSERT INTO animals (species, type, diet, lifespan, climate, description, path) VALUES('$species', '$type', '$diet', '$lifespan', '$climate', '$description', '$path')";
+        $habitat= $data['habitat'];
+        $diet = $data['diet'];
+        $diet_filter = $data['diet_filter'];
+        $habitat_filter = $data['habitat_filter'];
+        $endangered = $data['endangered'];
+        $path = $data ['path'];
+
+
+        $query = "INSERT INTO animals (species ,scientific, type, lifespan, description, habitat, diet, diet_filter,
+                     habitat_filter,endangered, path) 
+           VALUES('$species','$scientific', '$type','$lifespan','$description', '$habitat', '$diet', '$diet_filter',
+                  '$habitat_filter','$endangered', '$path')";
         mysqli_query($db, $query);
         header("location:animals.php");
 
@@ -37,15 +46,22 @@ if ($ext == 'json') //json
     $result = mysqli_query($db, $animal_check_query);
     $animal = mysqli_fetch_assoc($result);
     if (!$animal) {
+        $scientific = $animalinfo->scientific;
         $type = $animalinfo->type;
-        $diet = $animalinfo->diet;
         $lifespan = $animalinfo->lifespan;
-        $climate = $animalinfo->climate;
         $description = $animalinfo->description;
+        $habitat = $animalinfo->habitat;
+        $diet = $animalinfo->diet;
+        $diet_filter = $animalinfo->diet_filter;
+        $habitat_filter = $animalinfo->habitat_filter;
+        $endangered = $animalinfo->endangered;
         $path = $animalinfo->path;
 
 
-        $query = "INSERT INTO animals (species, type, diet, lifespan, climate, description,path) VALUES('$species', '$type', '$diet', '$lifespan', '$climate', '$description', '$path')";
+        $query = "INSERT INTO animals (species ,scientific, type, lifespan, description, habitat, diet, diet_filter,
+                     habitat_filter,endangered, path) 
+           VALUES('$species','$scientific', '$type','$lifespan','$description', '$habitat', '$diet', '$diet_filter',
+                  '$habitat_filter','$endangered', '$path')";
         mysqli_query($db, $query);
         header("location:animals.php");
     } else echo "Species already exists";
