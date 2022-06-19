@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -167,7 +167,7 @@ ul {
     display: block;
 }
 
-.button a{
+/*.button a{
     border: 2px solid black;
     background-color: white;
     padding: 14px 28px;
@@ -175,7 +175,7 @@ ul {
     cursor: pointer;
     border-color: #ff9800;
     color: orange;
-}
+}*/
 
 
 .button a:hover {

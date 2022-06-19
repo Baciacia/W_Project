@@ -89,15 +89,10 @@
             "</div>" .
 
             "<div class = 'bucati2'>" .
-<<<<<<< Updated upstream
                 "<div class = 'text'>" . "<h2>Diet : </h2>" . "</div>" .
                 "<div class = 'info_anim' >" . $row["diet"] . "<br>" . "</div>" .
-=======
-            "<div class = 'text'>" . "<h2>Diet : </h2>" . "</div>" .
-            "<div class = 'info_anim' >" . $row["diet"] . "<br>" . "</div>" .
->>>>>>> Stashed changes
             "</div>" .
-
+//php apeleaza in 2 locuri css uri diferite
             "<div class = 'button'>" .
             "<a href ='exportJSON.php?species=" . $row["species"] . "' target = '_self' >" . "Export JSON" . "</a>" .
             "</div>" .

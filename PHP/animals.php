@@ -37,13 +37,13 @@
     <!--aici faci cu animalele din baza de date-->
 </div>
 <?php
-if (isset($_COOKIE['user'])){
-    $username=$_COOKIE['user'];
+if (isset($_COOKIE['user'])) {
+    $username = $_COOKIE['user'];
     $db = mysqli_connect('localhost', 'root', '', 'accounts');
     $query = "SELECT admin FROM users WHERE username='$username' ";
     $result = $db->query($query);
     $row = $result->fetch_assoc();
-    if ($row['admin']==1)
+    if ($row['admin'] == 1)
         echo '
 <div class="import">
     <form action="import.php" method="get"
@@ -56,40 +56,133 @@ if (isset($_COOKIE['user'])){
 </div>';
 }
 ?>
-    <?php
 
-    echo "<style>";
-    include '../CSS/animals.css';
-    echo "</style>";
-
-    $db = mysqli_connect('localhost', 'root', '', 'accounts');
-    $query = "SELECT * FROM animals ORDER BY species";
-    $result = $db->query($query);
-    $row = $result->fetch_assoc();
-    $nr=0;
-    while ($row) {
-        $nr++;
-        if($nr%2==1)
-            echo "<div class='poze'>";
-        echo
-
-            "<div class='chenar'>".
-
-                "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' >".
-                    "<img src=" . $row['path'] . " class= 'pozeanimale'>".
-                "</a>".
-
-                "<div class = 'specie' >". $row["species"] . "<br>". "</div>".
-
-            "</div>";
-
-
+<form action="" method="post">
+    <select name="Diet">
+        <option value="" >Diet</option>
+        <?php
+        $db = mysqli_connect('localhost', 'root', '', 'accounts');
+        $query = "SELECT DISTINCT diet_filter FROM animals ";
+        $result = $db->query($query);
         $row = $result->fetch_assoc();
-        if($nr%2==0 || !$row)
-            echo "</div>";
+        while ($row) {
+            echo "<option value=" . $row['diet_filter'] . ">" . $row['diet_filter'] . "</option>";
+            $row = $result->fetch_assoc();
+        }
 
 
+        ?>
+    </select>
+    <select name="Habitat">
+        <option value="" >Habitat</option>
+        <?php
+        $db = mysqli_connect('localhost', 'root', '', 'accounts');
+        $query = "SELECT DISTINCT habitat_filter FROM animals ";
+        $result = $db->query($query);
+        $row = $result->fetch_assoc();
+        while ($row) {
+            echo "<option value=" . $row['habitat_filter'] . ">" . $row['habitat_filter'] . "</option>";
+            $row = $result->fetch_assoc();
+        }
+
+
+        ?>
+    </select>
+    <select name="Type">
+        <option value="" >Type</option>
+        <?php
+        $db = mysqli_connect('localhost', 'root', '', 'accounts');
+        $query = "SELECT DISTINCT type FROM animals ";
+        $result = $db->query($query);
+        $row = $result->fetch_assoc();
+        while ($row) {
+            echo "<option value=" . $row['type'] . ">" . $row['type'] . "</option>";
+            $row = $result->fetch_assoc();
+        }
+
+
+        ?>
+    </select>
+    <select name="Endangered">
+        <option value="" >Endangerment</option>
+        <option value="Endangered"> Endangered</option>
+        <option value="Stable"> Stable</option>
+    </select>
+    <input type="submit" name="submit" value="Filter">
+</form>
+
+<?php
+
+echo "<style>";
+include '../CSS/animals.css';
+echo "</style>";
+
+$db = mysqli_connect('localhost', 'root', '', 'accounts');
+$ok = 0;
+$dietq = "";
+$habitatq = "";
+$typeq = "";
+$dangerq = "";
+if (isset($_POST['submit'])) {
+    if (!empty($_POST['Diet'])) {
+        $dietq = "WHERE diet_filter='" . $_POST['Diet'] . "' ";
+        $ok = 1;
     }
-    ?>
+
+    if (!empty($_POST['Habitat'])) {
+        if ($ok == 1)
+            $habitatq = "AND habitat_filter='" . $_POST['Habitat'] . "' ";
+        else {
+            $habitatq = "WHERE habitat_filter='" . $_POST['Habitat'] . "' ";
+            $ok = 1; }
+    }
+
+    if (!empty($_POST['Type'])) {
+        if ($ok == 1)
+            $typeq = "AND type='" . $_POST['Type'] . "' ";
+        else {
+            $typeq = "WHERE type='" . $_POST['Type'] . "' ";
+            $ok = 1; }
+    }
+
+    if (!empty($_POST['Endangered'])) {
+        if($_POST['Endangered']=='Stable') $dng='0'; else $dng='1';
+        if ($ok == 1)
+            $dangerq = "AND endangered='" . $dng . "' ";
+        else {
+            $dangerq = "WHERE type='" . $dng . "' ";
+            $ok = 1; }
+    }
+}
+$crazyquery="SELECT species,path FROM animals ".$dietq.$habitatq.$typeq.$dangerq."ORDER BY species";
+//$query = "SELECT species,path FROM animals ORDER BY species";
+//echo $crazyquery;
+$result = $db->query($crazyquery);
+$row = $result->fetch_assoc();
+$nr = 0;
+while ($row) {
+    $nr++;
+    if ($nr % 2 == 1)
+        echo "<div class='poze'>";
+    echo
+
+        "<div class='chenar'>" .
+
+        "<a href = '../PHP/animal_temp.php?species=" . $row['species'] . "' class = 'link_animale' >" .
+        "<img src=" . $row['path'] . " class= 'pozeanimale'>" .
+        "</a>" .
+
+        "<div class = 'specie' >" . $row["species"] . "<br>" . "</div>" .
+
+        "</div>";
+
+
+    $row = $result->fetch_assoc();
+    if ($nr % 2 == 0 || !$row)
+        echo "</div>";
+
+
+}
+?>
 </body>
 </html>
