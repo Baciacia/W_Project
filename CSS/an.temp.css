@@ -151,12 +151,12 @@ ul {
 }
 
 .info_anim{
-    font-size: 210%;
+    font-size: 200%;
     margin-left: 1rem;
 }
 
 .info{
-    font-size: 200%;
+    font-size: 180%;
 }
 
 .button{
@@ -183,6 +183,28 @@ ul {
     color: white;
 }
 
+
+@media (max-width:900px)
+{
+    .info_anim{
+        font-size: 140%;
+    }
+    
+    .info{
+        font-size: 150%;
+    }
+
+    .text{
+        font-size: 90%;
+    }
+    
+}
+
+@media (max-width:900px){
+    .text{
+        font-size: 80%;
+    }
+}
 
 /* Responsiveness */
 @media (min-width: 900px) {

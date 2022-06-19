@@ -78,7 +78,7 @@
                 "<div class = 'info' >" . $row["habitat"] . "<br>" . "</div>" .
             "</div>" .
 
-            "<div class = 'bucati'>" .
+            "<div class = 'bucati2'>" .
                 "<div class = 'text'>" . "<h2>Diet : </h2>" . "</div>" .
                 "<div class = 'info_anim' >" . $row["diet"] . "<br>" . "</div>" .
             "</div>" .

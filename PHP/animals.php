@@ -45,13 +45,13 @@ if (isset($_COOKIE['user'])){
     $row = $result->fetch_assoc();
     if ($row['admin']==1)
         echo '
-<div>
+<div class="import">
     <form action="import.php" method="get"
           enctype="multipart/form-data">
-        <input type="file" id="myfile" accept=".xml, .json" name="myfile"/>
+        <input class = "file" type="file" id="myfile" accept=".xml, .json" name="myfile"/>
         <br/><br/>
 
-        <input type="submit"/>
+        <input class="button" type="submit"/>
     </form>
 </div>';
 }
@@ -72,11 +72,11 @@ if (isset($_COOKIE['user'])){
 
             "<div class='chenar'>".
 
-            "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' >".
-            "<img src=" . $row['path'] . " class= 'pozeanimale'>".
-            "</a>".
+                "<a href = '../PHP/animal_temp.php?species=". $row['species']. "' class = 'link_animale' >".
+                    "<img src=" . $row['path'] . " class= 'pozeanimale'>".
+                "</a>".
 
-            "<div class = 'specie' >". $row["species"] . "<br>". "</div>".
+                "<div class = 'specie' >". $row["species"] . "<br>". "</div>".
 
             "</div>";
 

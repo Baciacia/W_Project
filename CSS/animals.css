@@ -153,6 +153,34 @@ ul {
     margin-right: 4rem;
 }
 
+.import{
+    width: auto;
+    height: 5rem;
+    background-color: #e5ab0b;
+}
+
+.button{
+    margin-bottom: 1rem;
+    display: block;
+    border: 2px solid black;
+    background-color: white;
+    padding: 8px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: #ff9800;
+    color: orange;
+}
+
+.button:hover {
+    background: #0b3fa0;
+    color: white;
+}
+
+.file{
+    color: #0b3fa0;
+    font-size: 130%;
+}
+
 .info-bar a {
     font-size: 2rem;
     color: #261e1e;
