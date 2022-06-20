@@ -26,8 +26,6 @@
     </nav>
 </header>
 
-<script src="../JAVASCRIPT/api.js"></script>
-
 <div class="animals">
     <img src="../Imagini/animals.jpg" id="#an" style="width: 100%;" alt="#">
 </div>
