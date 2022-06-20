@@ -26,8 +26,6 @@
     </nav>
 </header>
 
-<script src="/JAVASCRIPT/api.js"></script>
-
 <div class="body-v">
     <div class="container-v">
         <div class="header-v">
@@ -52,7 +50,7 @@
 
             <div class="form-control-v">
                 <label>The number of people</label>
-                <input type="number" placeholder="Max 40" id="persons">
+                <input type="text" placeholder="Max 40" id="persons">
             </div>
 
             <div class="form-control-v">
@@ -74,11 +72,50 @@
                 </select>
             </div>
 
-            <button id="btn-submit">Submit</button>
+            <input id="btn-submit" type="button" class="btn-submit" value="Submit" />
 
         </form>
     </div>
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $("#btn-submit").click(function() {
+
+            var username= $("#username").val();
+            var email = $("#email").val();
+            var number = $("#number").val();
+            var persons = $("#persons").val();
+
+            if(username==''||email==''||number==''||persons=='') {
+                alert("Please fill all fields.");
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/PHP/visit.php",
+                data: {
+                    username: username,
+                    number: number,
+                    email: email,
+                    persons: persons
+                },
+                cache: false,
+                success: function(data) {
+                    alert(data);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr);
+                }
+            });
+
+        });
+
+    });
+</script>
 
 </body>
 </html>

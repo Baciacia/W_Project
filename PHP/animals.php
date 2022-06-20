@@ -34,7 +34,6 @@
 
 <div class="info-bar" id="i-bar">
     <h3>Come and visit various amazing animals from all over the world!</h3>
-    <!--aici faci cu animalele din baza de date-->
 </div>
 <?php
 if (isset($_COOKIE['user'])) {
@@ -57,8 +56,8 @@ if (isset($_COOKIE['user'])) {
 }
 ?>
 
-<form action="" method="post">
-    <select name="Diet">
+<form id="filter" action="" method="post">
+    <select name="Diet" id="Diet">
         <option value="" >Diet</option>
         <?php
         $db = mysqli_connect('localhost', 'root', '', 'accounts');
@@ -73,7 +72,7 @@ if (isset($_COOKIE['user'])) {
 
         ?>
     </select>
-    <select name="Habitat">
+    <select name="Habitat" id="Habitat">
         <option value="" >Habitat</option>
         <?php
         $db = mysqli_connect('localhost', 'root', '', 'accounts');
@@ -88,7 +87,7 @@ if (isset($_COOKIE['user'])) {
 
         ?>
     </select>
-    <select name="Type">
+    <select name="Type" id="Type">
         <option value="" >Type</option>
         <?php
         $db = mysqli_connect('localhost', 'root', '', 'accounts');
@@ -103,7 +102,7 @@ if (isset($_COOKIE['user'])) {
 
         ?>
     </select>
-    <select name="Endangered">
+    <select name="Endangered" id="Endangered">
         <option value="" >Endangerment</option>
         <option value="Endangered"> Endangered</option>
         <option value="Stable"> Stable</option>
