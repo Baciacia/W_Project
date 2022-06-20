@@ -48,9 +48,10 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
         $password = md5($password_1);//encriptam parola pentru securitate aditionala
 
-        $query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
-        mysqli_query($db, $query);
+        $inj = $db->prepare("INSERT INTO users (username, email, password)  VALUES (?, ?, ?)");
+        $inj->bind_param("sss", $username, $email, $password);
+        $inj->execute();
+
         $_SESSION['username'] = $username;
         $_SESSION['success'] = "You are now logged in";
         header('location:index.php');

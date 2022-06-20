@@ -28,11 +28,11 @@ if ($ext == 'json') //json
         $path = $data ['path'];
 
 
-        $query = "INSERT INTO animals (species ,scientific, type, lifespan, description, habitat, diet, diet_filter,
-                     habitat_filter,endangered, path) 
-           VALUES('$species','$scientific', '$type','$lifespan','$description', '$habitat', '$diet', '$diet_filter',
-                  '$habitat_filter','$endangered', '$path')";
-        mysqli_query($db, $query);
+        $inj = $db->prepare("INSERT INTO animals (species ,scientific, type, lifespan, description, habitat, diet, diet_filter,
+                     habitat_filter,endangered, path)  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $inj->bind_param("sssssssssss", $species,$scientific, $type,$lifespan,$description, $habitat, $diet, $diet_filter,
+            $habitat_filter,$endangered, $path);
+        $inj->execute();
         header("location:animals.php");
 
         //echo $data['species'];
@@ -58,11 +58,11 @@ if ($ext == 'json') //json
         $path = $animalinfo->path;
 
 
-        $query = "INSERT INTO animals (species ,scientific, type, lifespan, description, habitat, diet, diet_filter,
-                     habitat_filter,endangered, path) 
-           VALUES('$species','$scientific', '$type','$lifespan','$description', '$habitat', '$diet', '$diet_filter',
-                  '$habitat_filter','$endangered', '$path')";
-        mysqli_query($db, $query);
+        $inj = $db->prepare("INSERT INTO animals (species ,scientific, type, lifespan, description, habitat, diet, diet_filter,
+                     habitat_filter,endangered, path)  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $inj->bind_param("sssssssssss", $species,$scientific, $type,$lifespan,$description, $habitat, $diet, $diet_filter,
+                  $habitat_filter,$endangered, $path);
+        $inj->execute();
         header("location:animals.php");
     } else echo "Species already exists";
 

@@ -16,5 +16,3 @@ header('Content-Type: application/json');
 header('Content-Disposition: attachment; filename="'.$animal['species'].'Exp.json"');
 header('Content-Length: '. filesize($a));
 readfile($a);
-
-//nu uita sa stergi path ul la sfarsit
