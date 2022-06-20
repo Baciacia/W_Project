@@ -32,25 +32,25 @@
             <h2>Create a reservation</h2>
         </div>
 
-        <form class="form-v" id="form-v">
+        <form class="form-v" action="../PHP/visit.php" id="form-v">
             <div class="form-control-v">
                 <label>Name</label>
-                <input type="text" placeholder="Name" id="username">
+                <input type="text" placeholder="Name" id="username" name="username">
             </div>
 
             <div class="form-control-v">
                 <label>Email</label>
-                <input type="email" placeholder="email" id="email">
+                <input type="email" placeholder="email" id="email" name="email">
             </div>
 
             <div class="form-control-v">
                 <label>Telephone Number</label>
-                <input type="text" placeholder="07.." id="number">
+                <input type="text" placeholder="07.." id="number" name="number">
             </div>
 
             <div class="form-control-v">
                 <label>The number of people</label>
-                <input type="text" placeholder="Max 40" id="persons">
+                <input type="text" placeholder="Max 40" id="persons" name="persons">
             </div>
 
             <div class="form-control-v">
@@ -75,46 +75,46 @@
             <input id="btn-submit" type="button" class="btn-submit" value="Submit" />
 
         </form>
+        <div id="my-result"></div>
     </div>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
-    $(document).ready(function() {
+    function AJAXform( formID, buttonID, resultID, formMethod= 'post' ){
+        var selectForm = document.getElementById(formID); // Select the form by ID.
+        var selectButton = document.getElementById(buttonID); // Select the button by ID.
+        var selectResult = document.getElementById(resultID); // Select result element by ID.
+        var formAction = document.getElementById(formID).getAttribute('action'); // Get the form action.
+        var formInputs = document.getElementById(formID).querySelectorAll("input"); // Get the form inputs.
 
-        $("#btn-submit").click(function() {
+        function XMLhttp(){
+            var httpRequest = new XMLHttpRequest();
+            var formData = new FormData();
 
-            var username= $("#username").val();
-            var email = $("#email").val();
-            var number = $("#number").val();
-            var persons = $("#persons").val();
-
-            if(username==''||email==''||number==''||persons=='') {
-                alert("Please fill all fields.");
-                return false;
+            for( var i=0; i < formInputs.length; i++ ){
+                formData.append(formInputs[i].name, formInputs[i].value); // Add all inputs inside formData().
             }
 
-            $.ajax({
-                type: "POST",
-                url: "/PHP/visit.php",
-                data: {
-                    username: username,
-                    number: number,
-                    email: email,
-                    persons: persons
-                },
-                cache: false,
-                success: function(data) {
-                    alert(data);
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr);
+            httpRequest.onreadystatechange = function(){
+                if ( this.readyState == 4 && this.status === 200 ) {
+                    selectResult.innerHTML = this.responseText; // Display the result inside result element.
                 }
-            });
+            };
 
-        });
+            httpRequest.open(formMethod, formAction);
+            httpRequest.send(formData);
+        }
 
-    });
+        selectButton.onclick = function(){ // If clicked on the button.
+            XMLhttp();
+        }
+
+        selectForm.onsubmit = function(){ // Prevent page refresh
+            return false;
+        }
+    }
+   // window.onload= function (){
+    AJAXform('form-v','btn-submit','my-result','post');//};
 </script>
 
 </body>
