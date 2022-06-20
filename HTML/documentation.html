@@ -58,8 +58,7 @@ XXX
     <p>
         Furry Park is a web-application for a zoo, and is meant to be user-friendly and eye candy.In our vision, it
         should allow the users to browse through animal information like an encyclopedia and it should be a virtual
-        guide
-        for the zoo.
+        guide for the zoo.
     </p>
     <p>
         Also, we want large groups to be able to book their visit and a guide if they want.Individuals can buy
@@ -73,8 +72,8 @@ XXX
     <!-- review? -->
     <h2><span></span>Overall Description</h2>
     <p>
-        Furry Park is based on HTML (the base of the site), CSS (for design elements) and javascript (for dynamic and
-        interactive content).
+        Furry Park is based on HTML (the base of the site), CSS (for design elements), javascript (for dynamic and
+        interactive content) and php for writing server-side web application logic and connect the application with the other web services.
     </p>
     <section id="Root">
         <!-- review? -->
@@ -82,9 +81,9 @@ XXX
         <ul>
             <li>Account creation</li>
             <li>Exporting and importing animal information</li>
-            <li>Search filters</li>
             <li>Donations platform</li>
             <li>Booking platform</li>
+            <li>Sorting animals based on some infos</li>
         </ul>
     </section>
     <section id="article">
@@ -98,6 +97,7 @@ XXX
             <li>Search filters</li>
             <li>Donations platform</li>
             <li>Booking platform</li>
+            <li>Searching animals based on some characteristics</li>
         </ul>
         <p>
             Admin:
@@ -135,26 +135,17 @@ XXX
                 <pre><code>
                 &lt;nav class="navbar"&gt;
                     &lt;div class="logo"&gt;
-                        &lt;a href="/index.html" target="_self"&gt;FURRY PARK&lt;/a&gt;
+                        &lt;a href="index.html" target="_self"&gt;FURRY PARK&lt;/a&gt;
                     &lt;/div&gt;
                 &lt;ul class="nav_list"&gt;
                 &lt;li&gt;
-                    &lt;a href="/visit.html" target="_self"&gt;VISIT US&lt;/a&gt;
+                    &lt;a href="visit.html" target="_self"&gt;VISIT US&lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a href="/animals.html" target="_self"&gt;ANIMALS&lt;/a&gt;
+                    &lt;a href="animals.html" target="_self"&gt;ANIMALS&lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
-                    &lt;a href="/donate.html" target="_self"&gt;DONATE&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;label&gt;&lt;/label&gt;
-                    &lt;select name="lng" id="lng"&gt;
-                        &lt;option value="English"&gt;English&lt;/option&gt;
-                        &lt;option value="Spanish"&gt;Spanish&lt;/option&gt;
-                        &lt;option value="French"&gt;French&lt;/option&gt;
-                        &lt;option value="Romanian"&gt;Romanian&lt;/option&gt;
-                    &lt;/select&gt;
+                    &lt;a href="donate.html" target="_self"&gt;DONATE&lt;/a&gt;
                 &lt;/li&gt;
                 &lt;/ul&gt;
                 &lt;div class="meniu"&gt;
@@ -170,7 +161,8 @@ XXX
     </section>
 
     <p>
-        The wepage is responsive so that it can adapt to any screen size.
+        The wepage is responsive so that it can adapt to any screen size.so for any existing screen our site is made to adapt immediately keeping
+        a pleasant organization in sight
     </p>
     <p>
     <pre>
@@ -185,11 +177,23 @@ XXX
                         height: 60rem;
                     }
                 }
-            </code>
+                </code>
             </pre>
     </p>
     <p>
-        There will be an error displayed if any field of the forms is filled incorrectly.
+        he site works according to the following rules: if you want to visit the zoo, you must first make a reservation (which is done
+        by accessing the 'visit us' page in the navbar.After that you have the opportunity to support the zoo by equipping it with better
+        equipment, elements that improve the lives of animals through donations, which is possible by filling in the form on the donated
+        page that is on the side of the navbar.In order to make a plan with what to visit, what might interest you and all kinds of ideas,
+        we suggest you access the 'animals' page in the navbar, where you will be able to see which animals are eager to see you. You can
+        find out a lot of information about them, such as: scientific names, where they are found, if they are endangered, how long they
+        live, what they eat and many other curiosities.If our zoo was enough to make you smile, we invite you to be part of our family,
+        following just a few simple steps, that is to choose a username, a password, an email address to be up to date with all the
+        information related to animals and press the sign up button at the bottom of the page or on one of our pictures in the carousel
+        with pictures
+        There will be an error displayed if any field of the forms is filled incorrectly. At the same time we will limit the number of
+        characters that can be written in forms to avoid modifying the database through the commands written in the boxes intended
+        for writing the information by the visitor.
     </p>
     <img src="rsz_2error.png">
     <section id="typing-sections">
@@ -222,8 +226,9 @@ XXX
     <!-- review? -->
     <h2><span></span>System Features</h2>
     <p>
-        This section demonstrates the website's most prominent features and explains how they can
-        be used and the results they will give back to the user.
+        This section demonstrates the website's most prominent features and explains how they can be used and the results they will
+        give back to the user. The only solution to use the site is to have the database because it is a local one and otherwise you
+        would not have the necessary information to make certain orders.
     </p>
     <section>
         <!-- review? -->
@@ -244,9 +249,8 @@ XXX
         <!-- review? -->
         <h3><span>5.2</span> Filters</h3>
         <p>
-            On the animal page there is a search bar based on keywords/tags. The user will recieve a list of animal
-            pages based
-            on the applied filters.
+            On the animal page there is a form based on keywords/tags. The user will recieve a list of animal
+            pages based on the applied filters.
         </p>
         <p>
             On the bottom right side of the screen there is the reset button which
